@@ -1,0 +1,12 @@
+apiVersion: v2
+name: insightx
+description: INSIGHT-X Insider Threat Detection and Response Platform
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+keywords:
+  - insider-threat
+  - security
+  - trust
+maintainers:
+  - name: INSIGHT-X Team

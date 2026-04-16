@@ -1,0 +1,47 @@
+{
+    "alias": "step-up-authentication",
+    "description": "Step-up authentication required for sensitive operations (policy changes, control enforcement)",
+    "providerId": "basic-flow",
+    "topLevel": false,
+    "builtIn": false,
+    "authenticationExecutions": [
+        {
+            "authenticator": "conditional-user-role",
+            "authenticatorFlow": false,
+            "requirement": "REQUIRED",
+            "priority": 10,
+            "userSetupAllowed": false,
+            "authenticatorConfig": {
+                "alias": "require-security-engineer-or-ciso",
+                "config": {
+                    "condUserRole": "security_engineer,ciso",
+                    "condInvert": "false"
+                }
+            }
+        },
+        {
+            "authenticator": "auth-otp-form",
+            "authenticatorFlow": false,
+            "requirement": "REQUIRED",
+            "priority": 20,
+            "userSetupAllowed": true
+        },
+        {
+            "authenticator": "webauthn-authenticator",
+            "authenticatorFlow": false,
+            "requirement": "ALTERNATIVE",
+            "priority": 30,
+            "userSetupAllowed": true
+        }
+    ],
+    "metadata": {
+        "trigger_conditions": [
+            "policy_deployment",
+            "control_execution",
+            "user_termination",
+            "approval_override"
+        ],
+        "session_timeout_seconds": 300,
+        "skip_if_recent_auth_seconds": 120
+    }
+}

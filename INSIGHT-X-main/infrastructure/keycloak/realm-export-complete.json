@@ -1,0 +1,406 @@
+{
+    "id": "insightx",
+    "realm": "insightx",
+    "displayName": "INSIGHT-X Insider Threat Detection Platform",
+    "displayNameHtml": "<div class='kc-logo-text'><span>INSIGHT-X</span></div>",
+    "enabled": true,
+    "sslRequired": "external",
+    "registrationAllowed": false,
+    "registrationEmailAsUsername": true,
+    "rememberMe": true,
+    "verifyEmail": true,
+    "loginWithEmailAllowed": true,
+    "duplicateEmailsAllowed": false,
+    "resetPasswordAllowed": true,
+    "editUsernameAllowed": false,
+    "bruteForceProtected": true,
+    "permanentLockout": false,
+    "maxFailureWaitSeconds": 900,
+    "minimumQuickLoginWaitSeconds": 60,
+    "waitIncrementSeconds": 60,
+    "quickLoginCheckMilliSeconds": 1000,
+    "maxDeltaTimeSeconds": 43200,
+    "failureFactor": 5,
+  ""roles": {
+        "realm": [
+            {
+                "id": "security_analyst",
+                "name": "security_analyst",
+                "description": "Security analyst - view cases, evidence, timelines; no policy changes",
+                "composite": false,
+                "clientRole": false,
+                "containerId": "insightx",
+                "attributes": {
+                    "permissions": [
+                        "/api/cases:read",
+                        "/api/evidence:read",
+                        "/api/timelines:read",
+                        "/api/trust:read",
+                        "/api/alerts:read"
+                    ]
+                }
+            },
+            {
+                "id": "security_engineer",
+                "name": "security_engineer",
+                "description": "Security engineer - all analyst permissions + policy management",
+                "composite": true,
+                "composites": {
+                    "realm": [
+                        "security_analyst"
+                    ]
+                },
+                "clientRole": false,
+                "containerId": "insightx",
+                "attributes": {
+                    "permissions": [
+                        "/api/policies:read",
+                        "/api/policies:write",
+                        "/api/controls:write",
+                        "/api/responses:write"
+                    ],
+                    "mfa_required": [
+                        "true"
+                    ]
+                }
+            },
+            {
+                "id": "compliance_audit",
+                "name": "compliance_audit",
+                "description": "Compliance auditor - read-only access to all data, full audit logs",
+                "composite": false,
+                "clientRole": false,
+                "containerId": "insightx",
+                "attributes": {
+                    "permissions": [
+                        "/api/cases:read",
+                        "/api/trust:read",
+                        "/api/policies:read",
+                        "/api/audit:read",
+                        "/api/provenance:read"
+                    ]
+                }
+            },
+            {
+                "id": "hr_governed",
+                "name": "hr_governed",
+                "description": "HR personnel - limited view, no PII access, approval workflows only",
+                "composite": false,
+                "clientRole": false,
+                "containerId": "insightx",
+                "attributes": {
+                    "permissions": [
+                        "/api/approvals:read",
+                        "/api/approvals:write",
+                        "/api/cases:read:limited"
+                    ],
+                    "data_minimization": [
+                        "true"
+                    ],
+                    "pii_redaction": [
+                        "true"
+                    ]
+                }
+            },
+            {
+                "id": "ciso",
+                "name": "ciso",
+                "description": "CISO - full access to all features and data",
+                "composite": true,
+                "composites": {
+                    "realm": [
+                        "security_analyst",
+                        "security_engineer",
+                        "compliance_audit"
+                    ]
+                },
+                "clientRole": false,
+                "containerId": "insightx",
+                "attributes": {
+                    "permissions": [
+                        "/api/*:*"
+                    ],
+                    "mfa_required": [
+                        "true"
+                    ],
+                    "step_up_auth_required": [
+                        "true"
+                    ]
+                }
+            }
+        ],
+        "client": {}
+    },
+    "clients": [
+        {
+            "id": "insightx-ui",
+            "clientId": "insightx-ui",
+            "name": "INSIGHT-X Web UI",
+            "description": "Frontend web application",
+            "rootUrl": "${FRONTEND_URL}",
+            "adminUrl": "${FRONTEND_URL}",
+            "baseUrl": "/",
+            "surrogateAuthRequired": false,
+            "enabled": true,
+            "alwaysDisplayInConsole": false,
+            "clientAuthenticatorType": "client-secret",
+            "redirectUris": [
+                "${FRONTEND_URL}/*",
+                "http://localhost:5173/*"
+            ],
+            "webOrigins": [
+                "${FRONTEND_URL}",
+                "http://localhost:5173"
+            ],
+            "notBefore": 0,
+            "bearerOnly": false,
+            "consentRequired": false,
+            "standardFlowEnabled": true,
+            "implicitFlowEnabled": false,
+            "directAccessGrantsEnabled": false,
+            "serviceAccountsEnabled": false,
+            "publicClient": true,
+            "frontchannelLogout": false,
+            "protocol": "openid-connect",
+            "attributes": {
+                "saml.assertion.signature": "false",
+                "saml.multivalued.roles": "false",
+                "saml.force.post.binding": "false",
+                "saml.encrypt": "false",
+                "oauth2.device.authorization.grant.enabled": "false",
+                "backchannel.logout.revoke.offline.tokens": "false",
+                "saml.server.signature": "false",
+                "saml.server.signature.keyinfo.ext": "false",
+                "use.refresh.tokens": "true",
+                "exclude.session.state.from.auth.response": "false",
+                "oidc.ciba.grant.enabled": "false",
+                "saml.artifact.binding": "false",
+                "backchannel.logout.session.required": "true",
+                "client_credentials.use_refresh_token": "false",
+                "saml_force_name_id_format": "false",
+                "require.pushed.authorization.requests": "false",
+                "saml.client.signature": "false",
+                "tls.client.certificate.bound.access.tokens": "false",
+                "saml.authnstatement": "false",
+                "display.on.consent.screen": "false",
+                "saml.onetimeuse.condition": "false",
+                "pkce.code.challenge.method": "S256"
+            },
+            "authenticationFlowBindingOverrides": {},
+            "fullScopeAllowed": true,
+            "nodeReRegistrationTimeout": -1,
+            "defaultClientScopes": [
+                "web-origins",
+                "acr",
+                "profile",
+                "roles",
+                "email"
+            ],
+            "optionalClientScopes": [
+                "address",
+                "phone",
+                "offline_access",
+                "microprofile-jwt"
+            ]
+        },
+        {
+            "id": "insightx-api-gateway",
+            "clientId": "insightx-api-gateway",
+            "name": "INSIGHT-X API Gateway",
+            "description": "Backend API gateway service",
+            "surrogateAuthRequired": false,
+            "enabled": true,
+            "alwaysDisplayInConsole": false,
+            "clientAuthenticatorType": "client-secret",
+            "secret": "${KEYCLOAK_API_GATEWAY_SECRET}",
+            "redirectUris": [],
+            "webOrigins": [],
+            "notBefore": 0,
+            "bearerOnly": false,
+            "consentRequired": false,
+            "standardFlowEnabled": false,
+            "implicitFlowEnabled": false,
+            "directAccessGrantsEnabled": false,
+            "serviceAccountsEnabled": true,
+            "authorizationServicesEnabled": true,
+            "publicClient": false,
+            "frontchannelLogout": false,
+            "protocol": "openid-connect",
+            "attributes": {
+                "oauth2.device.authorization.grant.enabled": "false",
+                "backchannel.logout.revoke.offline.tokens": "false",
+                "use.refresh.tokens": "true",
+                "oidc.ciba.grant.enabled": "false",
+                "backchannel.logout.session.required": "true",
+                "client_credentials.use_refresh_token": "false",
+                "require.pushed.authorization.requests": "false",
+                "tls.client.certificate.bound.access.tokens": "false",
+                "display.on.consent.screen": "false"
+            },
+            "authenticationFlowBindingOverrides": {},
+            "fullScopeAllowed": true,
+            "nodeReRegistrationTimeout": -1,
+            "protocolMappers": [
+                {
+                    "name": "realm-roles",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-realm-role-mapper",
+                    "consentRequired": false,
+                    "config": {
+                        "multivalued": "true",
+                        "userinfo.token.claim": "true",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "claim.name": "realm_roles",
+                        "jsonType.label": "String"
+                    }
+                }
+            ],
+            "defaultClientScopes": [
+                "web-origins",
+                "acr",
+                "profile",
+                "roles",
+                "email"
+            ],
+            "optionalClientScopes": [
+                "address",
+                "phone",
+                "offline_access",
+                "microprofile-jwt"
+            ]
+        }
+    ],
+    "clientScopes": [
+        {
+            "name": "insightx-permissions",
+            "description": "INSIGHT-X resource-based permissions",
+            "protocol": "openid-connect",
+            "attributes": {
+                "include.in.token.scope": "true",
+                "display.on.consent.screen": "true"
+            },
+            "protocolMappers": [
+                {
+                    "name": "permissions",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-usermodel-attribute-mapper",
+                    "consentRequired": false,
+                    "config": {
+                        "userinfo.token.claim": "true",
+                        "user.attribute": "permissions",
+                        "id.token.claim": "true",
+                        "access.token.claim": "true",
+                        "claim.name": "permissions",
+                        "jsonType.label": "String",
+                        "multivalued": "true"
+                    }
+                }
+            ]
+        }
+    ],
+    "requiredActions": [
+        {
+            "alias": "CONFIGURE_TOTP",
+            "name": "Configure OTP",
+            "providerId": "CONFIGURE_TOTP",
+            "enabled": true,
+            "defaultAction": false,
+            "priority": 10,
+            "config": {}
+        },
+        {
+            "alias": "UPDATE_PASSWORD",
+            "name": "Update Password",
+            "providerId": "UPDATE_PASSWORD",
+            "enabled": true,
+            "defaultAction": false,
+            "priority": 30,
+            "config": {}
+        },
+        {
+            "alias": "UPDATE_PROFILE",
+            "name": "Update Profile",
+            "providerId": "UPDATE_PROFILE",
+            "enabled": true,
+            "defaultAction": false,
+            "priority": 40,
+            "config": {}
+        },
+        {
+            "alias": "VERIFY_EMAIL",
+            "name": "Verify Email",
+            "providerId": "VERIFY_EMAIL",
+            "enabled": true,
+            "defaultAction": false,
+            "priority": 50,
+            "config": {}
+        }
+    ],
+    "passwordPolicy": "hashAlgorithm(pbkdf2-sha512) and hashIterations(210000) and length(12) and notUsername and notEmail and upperCase(1) and lowerCase(1) and digits(1) and specialChars(1) and passwordHistory(5) and forceExpiredPasswordChange(90)",
+    "otpPolicyType": "totp",
+    "otpPolicyAlgorithm": "HmacSHA256",
+    "otpPolicyInitialCounter": 0,
+    "otpPolicyDigits": 6,
+    "otpPolicyLookAheadWindow": 1,
+    "otpPolicyPeriod": 30,
+    "webAuthnPolicyRpEntityName": "INSIGHT-X",
+    "webAuthnPolicySignatureAlgorithms": [
+        "ES256",
+        "RS256"
+    ],
+    "webAuthnPolicyRpId": "",
+    "webAuthnPolicyAttestationConveyancePreference": "not specified",
+    "webAuthnPolicyAuthenticatorAttachment": "not specified",
+    "webAuthnPolicyRequireResidentKey": "not specified",
+    "webAuthnPolicyUserVerificationRequirement": "not specified",
+    "webAuthnPolicyCreateTimeout": 0,
+    "webAuthnPolicyAvoidSameAuthenticatorRegister": false,
+    "webAuthnPolicyAcceptableAaguids": [],
+    "smtpServer": {
+        "password": "${SMTP_PASSWORD}",
+        "starttls": "true",
+        "auth": "true",
+        "port": "587",
+        "host": "${SMTP_HOST}",
+        "replyToDisplayName": "INSIGHT-X Security",
+        "replyTo": "security@insightx.example.com",
+        "from": "noreply@insightx.example.com",
+        "fromDisplayName": "INSIGHT-X Platform",
+        "envelopeFrom": "",
+        "ssl": "false",
+        "user": "${SMTP_USER}"
+    },
+    "eventsEnabled": true,
+    "eventsListeners": [
+        "jboss-logging"
+    ],
+    "enabledEventTypes": [
+        "LOGIN",
+        "LOGIN_ERROR",
+        "LOGOUT",
+        "REGISTER",
+        "REGISTER_ERROR",
+        "UPDATE_PASSWORD",
+        "UPDATE_PASSWORD_ERROR",
+        "UPDATE_TOTP",
+        "UPDATE_TOTP_ERROR",
+        "VERIFY_EMAIL",
+        "VERIFY_EMAIL_ERROR",
+        "REMOVE_TOTP",
+        "SEND_RESET_PASSWORD",
+        "SEND_VERIFY_EMAIL",
+        "CLIENT_LOGIN",
+        "CLIENT_LOGIN_ERROR"
+    ],
+    "adminEventsEnabled": true,
+    "adminEventsDetailsEnabled": true,
+    "internationalizationEnabled": true,
+    "supportedLocales": [
+        "en",
+        "de",
+        "fr",
+        "es"
+    ],
+    "defaultLocale": "en"
+}

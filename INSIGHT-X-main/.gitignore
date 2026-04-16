@@ -1,0 +1,87 @@
+# OS / Filesystem
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors / IDE
+.vscode/
+.idea/
+*.iml
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.swp
+*.swo
+*~
+
+# Environment / Secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.jks
+
+# Node / Frontend
+**/node_modules/
+**/dist/
+**/.vite/
+**/.cache/
+**/coverage/
+**/.nyc_output/
+**/*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Java / Maven / Gradle
+**/target/
+**/build/
+**/.gradle/
+**/.classpath
+**/.project
+**/.settings/
+**/out/
+*.class
+hs_err_pid*
+replay_pid*
+
+# Python (for utility scripts)
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Test / Report Artifacts
+**/surefire-reports/
+**/failsafe-reports/
+**/test-results/
+**/reports/
+**/jacoco/
+**/jacoco.exec
+coverage-final.json
+*.lcov
+
+# Runtime / Temp
+*.pid
+*.tmp
+*.temp
+*.log
+*.err
+*.out
+
+# Project-specific generated artifacts
+BOOT-INF/
+*-debug.jar
+
+# Root prompt artifacts policy
+/Master Prompts/
+/*prompt*/
+/*prompt*.*

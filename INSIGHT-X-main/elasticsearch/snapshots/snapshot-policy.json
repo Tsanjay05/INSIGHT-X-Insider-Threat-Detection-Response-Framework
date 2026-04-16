@@ -1,0 +1,24 @@
+{
+    "schedule": "0 2 * * *",
+    "name": "<insightx-snapshot-{now/d}>",
+    "repository": "insightx-snapshots",
+    "config": {
+        "indices": [
+            "insightx-provenance-*",
+            "insightx-policy-decisions-*",
+            "insightx-risk-indicators-*"
+        ],
+        "ignore_unavailable": false,
+        "include_global_state": false,
+        "partial": false,
+        "metadata": {
+            "taken_by": "insightx-snapshot-policy",
+            "taken_because": "scheduled daily backup"
+        }
+    },
+    "retention": {
+        "expire_after": "30d",
+        "min_count": 7,
+        "max_count": 90
+    }
+}

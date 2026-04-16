@@ -1,0 +1,280 @@
+{
+    "resource_server": {
+        "name": "INSIGHT-X API Resources",
+        "allowRemoteResourceManagement": true,
+        "policyEnforcementMode": "ENFORCING",
+        "decisionStrategy": "AFFIRMATIVE",
+        "resources": [
+            {
+                "name": "cases",
+                "type": "urn:insightx:resources:cases",
+                "ownerManagedAccess": false,
+                "displayName": "Investigation Cases",
+                "uris": [
+                    "/api/cases",
+                    "/api/cases/*"
+                ],
+                "scopes": [
+                    {
+                        "name": "read"
+                    },
+                    {
+                        "name": "write"
+                    },
+                    {
+                        "name": "delete"
+                    }
+                ]
+            },
+            {
+                "name": "trust",
+                "type": "urn:insightx:resources:trust",
+                "ownerManagedAccess": false,
+                "displayName": "Trust State",
+                "uris": [
+                    "/api/trust",
+                    "/api/trust/*"
+                ],
+                "scopes": [
+                    {
+                        "name": "read"
+                    },
+                    {
+                        "name": "write"
+                    }
+                ]
+            },
+            {
+                "name": "policies",
+                "type": "urn:insightx:resources:policies",
+                "ownerManagedAccess": false,
+                "displayName": "OPA Policies",
+                "uris": [
+                    "/api/policies",
+                    "/api/policies/*"
+                ],
+                "scopes": [
+                    {
+                        "name": "read"
+                    },
+                    {
+                        "name": "write"
+                    },
+                    {
+                        "name": "deploy"
+                    }
+                ]
+            },
+            {
+                "name": "controls",
+                "type": "urn:insightx:resources:controls",
+                "ownerManagedAccess": false,
+                "displayName": "Response Controls",
+                "uris": [
+                    "/api/controls",
+                    "/api/controls/*"
+                ],
+                "scopes": [
+                    {
+                        "name": "read"
+                    },
+                    {
+                        "name": "write"
+                    },
+                    {
+                        "name": "execute"
+                    }
+                ]
+            },
+            {
+                "name": "audit",
+                "type": "urn:insightx:resources:audit",
+                "ownerManagedAccess": false,
+                "displayName": "Audit Logs",
+                "uris": [
+                    "/api/audit",
+                    "/api/audit/*"
+                ],
+                "scopes": [
+                    {
+                        "name": "read"
+                    }
+                ]
+            },
+            {
+                "name": "approvals",
+                "type": "urn:insightx:resources:approvals",
+                "ownerManagedAccess": false,
+                "displayName": "Human Approvals",
+                "uris": [
+                    "/api/approvals",
+                    "/api/approvals/*"
+                ],
+                "scopes": [
+                    {
+                        "name": "read"
+                    },
+                    {
+                        "name": "write"
+                    },
+                    {
+                        "name": "approve"
+                    },
+                    {
+                        "name": "reject"
+                    }
+                ]
+            }
+        ],
+        "policies": [
+            {
+                "name": "Security Analyst Policy",
+                "description": "Allows security analysts to view cases and evidence",
+                "type": "role",
+                "logic": "POSITIVE",
+                "decisionStrategy": "UNANIMOUS",
+                "config": {
+                    "roles": "[{\"id\":\"security_analyst\",\"required\":true}]"
+                }
+            },
+            {
+                "name": "Security Engineer Policy",
+                "description": "Allows security engineers to manage policies and controls",
+                "type": "role",
+                "logic": "POSITIVE",
+                "decisionStrategy": "UNANIMOUS",
+                "config": {
+                    "roles": "[{\"id\":\"security_engineer\",\"required\":true}]"
+                }
+            },
+            {
+                "name": "Compliance Audit Policy",
+                "description": "Allows compliance auditors read-only access to all data",
+                "type": "role",
+                "logic": "POSITIVE",
+                "decisionStrategy": "UNANIMOUS",
+                "config": {
+                    "roles": "[{\"id\":\"compliance_audit\",\"required\":true}]"
+                }
+            },
+            {
+                "name": "HR Governed Policy",
+                "description": "Allows HR personnel limited access to approvals",
+                "type": "role",
+                "logic": "POSITIVE",
+                "decisionStrategy": "UNANIMOUS",
+                "config": {
+                    "roles": "[{\"id\":\"hr_governed\",\"required\":true}]"
+                }
+            },
+            {
+                "name": "CISO Policy",
+                "description": "Allows CISO full access to all resources",
+                "type": "role",
+                "logic": "POSITIVE",
+                "decisionStrategy": "UNANIMOUS",
+                "config": {
+                    "roles": "[{\"id\":\"ciso\",\"required\":true}]"
+                }
+            }
+        ],
+        "permissions": [
+            {
+                "name": "Cases Read Permission",
+                "description": "Permission to read investigation cases",
+                "type": "scope",
+                "logic": "POSITIVE",
+                "decisionStrategy": "AFFIRMATIVE",
+                "config": {
+                    "resources": "[\"cases\"]",
+                    "scopes": "[\"read\"]",
+                    "applyPolicies": "[\"Security Analyst Policy\",\"Security Engineer Policy\",\"Compliance Audit Policy\",\"CISO Policy\"]"
+                }
+            },
+            {
+                "name": "Cases Write Permission",
+                "description": "Permission to write investigation cases",
+                "type": "scope",
+                "logic": "POSITIVE",
+                "decisionStrategy": "AFFIRMATIVE",
+                "config": {
+                    "resources": "[\"cases\"]",
+                    "scopes": "[\"write\"]",
+                    "applyPolicies": "[\"Security Engineer Policy\",\"CISO Policy\"]"
+                }
+            },
+            {
+                "name": "Trust Read Permission",
+                "description": "Permission to read trust state",
+                "type": "scope",
+                "logic": "POSITIVE",
+                "decisionStrategy": "AFFIRMATIVE",
+                "config": {
+                    "resources": "[\"trust\"]",
+                    "scopes": "[\"read\"]",
+                    "applyPolicies": "[\"Security Analyst Policy\",\"Security Engineer Policy\",\"CISO Policy\"]"
+                }
+            },
+            {
+                "name": "Trust Write Permission",
+                "description": "Permission to modify trust state",
+                "type": "scope",
+                "logic": "POSITIVE",
+                "decisionStrategy": "AFFIRMATIVE",
+                "config": {
+                    "resources": "[\"trust\"]",
+                    "scopes": "[\"write\"]",
+                    "applyPolicies": "[\"Security Engineer Policy\",\"CISO Policy\"]"
+                }
+            },
+            {
+                "name": "Policies Manage Permission",
+                "description": "Permission to manage OPA policies",
+                "type": "scope",
+                "logic": "POSITIVE",
+                "decisionStrategy": "AFFIRMATIVE",
+                "config": {
+                    "resources": "[\"policies\"]",
+                    "scopes": "[\"read\",\"write\",\"deploy\"]",
+                    "applyPolicies": "[\"Security Engineer Policy\",\"CISO Policy\"]"
+                }
+            },
+            {
+                "name": "Controls Execute Permission",
+                "description": "Permission to execute response controls",
+                "type": "scope",
+                "logic": "POSITIVE",
+                "decisionStrategy": "AFFIRMATIVE",
+                "config": {
+                    "resources": "[\"controls\"]",
+                    "scopes": "[\"execute\"]",
+                    "applyPolicies": "[\"Security Engineer Policy\",\"CISO Policy\"]"
+                }
+            },
+            {
+                "name": "Audit Read Permission",
+                "description": "Permission to read audit logs",
+                "type": "scope",
+                "logic": "POSITIVE",
+                "decisionStrategy": "AFFIRMATIVE",
+                "config": {
+                    "resources": "[\"audit\"]",
+                    "scopes": "[\"read\"]",
+                    "applyPolicies": "[\"Compliance Audit Policy\",\"CISO Policy\"]"
+                }
+            },
+            {
+                "name": "Approvals Manage Permission",
+                "description": "Permission to manage human approvals",
+                "type": "scope",
+                "logic": "POSITIVE",
+                "decisionStrategy": "AFFIRMATIVE",
+                "config": {
+                    "resources": "[\"approvals\"]",
+                    "scopes": "[\"read\",\"write\",\"approve\",\"reject\"]",
+                    "applyPolicies": "[\"HR Governed Policy\",\"CISO Policy\"]"
+                }
+            }
+        ]
+    }
+}

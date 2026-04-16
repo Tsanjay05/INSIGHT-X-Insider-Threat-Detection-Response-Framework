@@ -1,0 +1,26 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: insightx-ingestion
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: insightx-ingestion-group
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        enable.idempotence: true
+        acks: all
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/insightx
+    username: insightx
+    password: insightx
+  flyway:
+    url: jdbc:postgresql://localhost:5432/insightx
+    user: insightx
+    password: insightx

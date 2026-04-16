@@ -1,0 +1,90 @@
+# INSIGHT-X Helm Chart Values - Staging Environment
+# Pre-production testing configuration
+
+global:
+  environment: staging
+  region: us-east-1
+
+# Staging replica counts
+ingestion:
+  replicaCount: 2
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 8
+
+trustEngine:
+  replicaCount: 2
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 8
+
+intent:
+  replicaCount: 2
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 8
+
+graph:
+  replicaCount: 2
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 8
+
+controls:
+  replicaCount: 2
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 8
+
+provenance:
+  replicaCount: 2
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 8
+
+apiGateway:
+  replicaCount: 2
+  autoscaling:
+    minReplicas: 2
+    maxReplicas: 10
+
+# Multi-region disabled
+dataResidency:
+  enabled: false
+
+# Fault isolation enabled
+faultIsolation:
+  enabled: true
+  podAntiAffinity:
+    type: soft  # Soft anti-affinity in staging
+
+# Standard security
+security:
+  podSecurityPolicy:
+    enabled: true
+  networkPolicy:
+    enabled: true
+  podDisruptionBudget:
+    enabled: true
+    minAvailable: 1
+  serviceMesh:
+    enabled: false
+
+# Backup enabled with shorter retention
+backup:
+  enabled: true
+  schedule: "0 3 * * *"  # Daily
+  retention:
+    daily: 7
+    weekly: 4
+    monthly: 6
+
+# Observability
+observability:
+  metrics:
+    enabled: true
+  tracing:
+    enabled: true
+    samplingRate: 0.2  # 20% sampling in staging
+  logging:
+    level: INFO

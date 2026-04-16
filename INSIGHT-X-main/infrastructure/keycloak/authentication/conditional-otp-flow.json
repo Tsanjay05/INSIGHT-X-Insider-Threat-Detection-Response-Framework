@@ -1,0 +1,23 @@
+{
+    "alias": "forms-with-conditional-otp",
+    "description": "Username/password form with conditional OTP based on role",
+    "providerId": "basic-flow",
+    "topLevel": false,
+    "builtIn": false,
+    "authenticationExecutions": [
+        {
+            "authenticator": "auth-username-password-form",
+            "authenticatorFlow": false,
+            "requirement": "REQUIRED",
+            "priority": 10,
+            "userSetupAllowed": false
+        },
+        {
+            "authenticatorFlow": true,
+            "requirement": "CONDITIONAL",
+            "priority": 20,
+            "flowAlias": "conditional-role-based-otp",
+            "userSetupAllowed": false
+        }
+    ]
+}

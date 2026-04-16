@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "InsightXEvent",
+  "namespace": "com.insightx.events",
+  "fields": [
+    {"name": "eventId", "type": "string"},
+    {"name": "timestamp", "type": "long", "logicalType": "timestamp-millis"},
+    {"name": "eventType", "type": {"type": "enum", "name": "EventType", "symbols": ["AUTH", "AUTHZ", "DATA_ACCESS", "PRIVILEGED_OP", "WORKFLOW"]}},
+    {"name": "userId", "type": "string"},
+    {"name": "resourceId", "type": ["null", "string"]},
+    {"name": "payload", "type": "bytes"}
+  ]
+}

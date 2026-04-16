@@ -1,0 +1,134 @@
+{{- if .Values.observability.metrics.serviceMonitor.enabled }}
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "insightx.fullname" . }}-ingestion
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: ingestion
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: ingestion
+  endpoints:
+  - port: metrics
+    interval: {{ .Values.observability.metrics.serviceMonitor.interval }}
+    scrapeTimeout: {{ .Values.observability.metrics.serviceMonitor.scrapeTimeout }}
+    path: /actuator/prometheus
+
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "insightx.fullname" . }}-trust-engine
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: trust-engine
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: trust-engine
+  endpoints:
+  - port: metrics
+    interval: {{ .Values.observability.metrics.serviceMonitor.interval }}
+    scrapeTimeout: {{ .Values.observability.metrics.serviceMonitor.scrapeTimeout }}
+    path: /actuator/prometheus
+
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "insightx.fullname" . }}-intent
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: intent
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: intent
+  endpoints:
+  - port: metrics
+    interval: {{ .Values.observability.metrics.serviceMonitor.interval }}
+    scrapeTimeout: {{ .Values.observability.metrics.serviceMonitor.scrapeTimeout }}
+    path: /actuator/prometheus
+
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "insightx.fullname" . }}-graph
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: graph
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: graph
+  endpoints:
+  - port: metrics
+    interval: {{ .Values.observability.metrics.serviceMonitor.interval }}
+    scrapeTimeout: {{ .Values.observability.metrics.serviceMonitor.scrapeTimeout }}
+    path: /actuator/prometheus
+
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "insightx.fullname" . }}-controls
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: controls
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: controls
+  endpoints:
+  - port: metrics
+    interval: {{ .Values.observability.metrics.serviceMonitor.interval }}
+    scrapeTimeout: {{ .Values.observability.metrics.serviceMonitor.scrapeTimeout }}
+    path: /actuator/prometheus
+
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "insightx.fullname" . }}-provenance
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: provenance
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: provenance
+  endpoints:
+  - port: metrics
+    interval: {{ .Values.observability.metrics.serviceMonitor.interval }}
+    scrapeTimeout: {{ .Values.observability.metrics.serviceMonitor.scrapeTimeout }}
+    path: /actuator/prometheus
+
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "insightx.fullname" . }}-api-gateway
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: api-gateway
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: api-gateway
+  endpoints:
+  - port: metrics
+    interval: {{ .Values.observability.metrics.serviceMonitor.interval }}
+    scrapeTimeout: {{ .Values.observability.metrics.serviceMonitor.scrapeTimeout }}
+    path: /actuator/prometheus
+{{- end }}

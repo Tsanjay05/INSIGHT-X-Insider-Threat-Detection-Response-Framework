@@ -1,0 +1,29 @@
+# Prometheus Alerting Rules for INSIGHT-X
+# Critical metrics: trust evaluation latency, policy execution, signal drift
+
+groups:
+  - name: insightx-critical
+    rules:
+      - alert: HighTrustEvaluationLatency
+        expr: histogram_quantile(0.95, rate(insightx_trust_evaluation_duration_seconds_bucket[5m])) > 1
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: Trust evaluation p95 latency exceeds 1s
+
+      - alert: PolicyExecutionFailure
+        expr: rate(insightx_policy_execution_errors_total[5m]) > 0.01
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: Policy execution error rate elevated
+
+      - alert: SignalDriftDetected
+        expr: insightx_signal_drift_detected == 1
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: Signal drift detected in behavioral baseline

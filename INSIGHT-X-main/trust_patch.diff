@@ -1,0 +1,12 @@
+﻿*** Begin Patch
+*** Update File: backend/insightx-trust-engine/src/main/resources/application.yml
+@@
+   flyway:
+     enabled: true
+     url: jdbc:postgresql://localhost:5432/insightx?options=-c%20timezone=UTC
+     user: insightx
+     password: insightx
+-    locations: classpath:db/migration
++    locations: classpath:db/migration
++    baseline-on-migrate: true
+*** End Patch

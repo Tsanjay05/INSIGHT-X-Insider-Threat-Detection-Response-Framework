@@ -1,0 +1,28 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: insightx-intent-test
+
+  r2dbc:
+    url: r2dbc:h2:mem:///insightx_intent;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: 
+    pool:
+      enabled: false
+
+  flyway:
+    enabled: true
+    url: jdbc:h2:mem:insightx_intent;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    user: sa
+    password: 
+    locations: classpath:db/migration
+
+  jackson:
+    time-zone: UTC
+
+logging:
+  level:
+    root: INFO
+    com.insightx: DEBUG

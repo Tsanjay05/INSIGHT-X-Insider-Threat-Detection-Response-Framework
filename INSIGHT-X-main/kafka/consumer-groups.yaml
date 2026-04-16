@@ -1,0 +1,92 @@
+# INSIGHT-X Kafka Consumer Groups Configuration
+
+consumer_groups:
+  # Ingestion Service Consumer Group
+  - name: insightx-ingestion-group
+    topics:
+      - insightx.auth.events
+      - insightx.authz.events
+      - insightx.data-access.events
+      - insightx.privileged-ops.events
+      - insightx.workflow.events
+    config:
+      partition.assignment.strategy: RoundRobinAssignor
+      session.timeout.ms: 30000
+      heartbeat.interval.ms: 3000
+      max.poll.records: 500
+      max.poll.interval.ms: 300000
+      fetch.min.bytes: 1
+      fetch.max.wait.ms: 500
+      enable.auto.commit: false  # Manual offset management
+      auto.offset.reset: earliest
+
+  # Trust Engine Consumer Group
+  - name: insightx-trust-engine-group
+    topics:
+      - insightx.enriched.events
+    config:
+      partition.assignment.strategy: StickyAssignor
+      session.timeout.ms: 30000
+      heartbeat.interval.ms: 3000
+      max.poll.records: 500
+      max.poll.interval.ms: 300000
+      enable.auto.commit: false
+      auto.offset.reset: latest
+      isolation.level: read_committed  # For exactly-once
+
+  # Intent Service Consumer Group
+  - name: insightx-intent-group
+    topics:
+      - insightx.enriched.events
+    config:
+      partition.assignment.strategy: CooperativeStickyAssignor
+      session.timeout.ms: 30000
+      heartbeat.interval.ms: 3000
+      max.poll.records: 300
+      max.poll.interval.ms: 600000  # Higher for ML inference
+      enable.auto.commit: false
+      auto.offset.reset: latest
+
+  # Graph Service Consumer Group
+  - name: insightx-graph-group
+    topics:
+      - insightx.enriched.events
+    config:
+      partition.assignment.strategy: RoundRobinAssignor
+      session.timeout.ms: 30000
+      heartbeat.interval.ms: 3000
+      max.poll.records: 200
+      max.poll.interval.ms: 300000
+      enable.auto.commit: false
+      auto.offset.reset: latest
+
+  # Controls Service Consumer Group
+  - name: insightx-controls-group
+    topics:
+      - insightx.trust.state
+    config:
+      partition.assignment.strategy: StickyAssignor
+      session.timeout.ms: 30000
+      heartbeat.interval.ms: 3000
+      max.poll.records: 100
+      max.poll.interval.ms: 300000
+      enable.auto.commit: false
+      auto.offset.reset: latest
+
+  # Provenance Service Consumer Group
+  - name: insightx-provenance-group
+    topics:
+      - insightx.auth.events
+      - insightx.authz.events
+      - insightx.data-access.events
+      - insightx.privileged-ops.events
+      - insightx.workflow.events
+      - insightx.enriched.events
+    config:
+      partition.assignment.strategy: RoundRobinAssignor
+      session.timeout.ms: 30000
+      heartbeat.interval.ms: 3000
+      max.poll.records: 500
+      max.poll.interval.ms: 300000
+      enable.auto.commit: false
+      auto.offset.reset: earliest  # Never miss provenance events

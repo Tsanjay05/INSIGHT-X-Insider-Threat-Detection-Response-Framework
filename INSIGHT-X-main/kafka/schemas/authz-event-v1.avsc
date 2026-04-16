@@ -1,0 +1,92 @@
+{
+  "type": "record",
+  "name": "AuthzEvent",
+  "namespace": "com.insightx.events",
+  "doc": "Authorization event schema for access control decisions",
+  "fields": [
+    {
+      "name": "event_id",
+      "type": "string",
+      "doc": "Unique event identifier (UUID)"
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "logicalType": "timestamp-millis",
+      "doc": "Event timestamp in milliseconds since epoch"
+    },
+    {
+      "name": "user_id",
+      "type": "string",
+      "doc": "User identifier"
+    },
+    {
+      "name": "source_system",
+      "type": "string",
+      "doc": "Source system generating the event"
+    },
+    {
+      "name": "event_type",
+      "type": {
+        "type": "enum",
+        "name": "AuthzEventType",
+        "symbols": [
+          "ACCESS_GRANTED",
+          "ACCESS_DENIED",
+          "PERMISSION_CHANGE",
+          "ROLE_ASSIGNMENT",
+          "ROLE_REVOCATION",
+          "POLICY_EVALUATION"
+        ]
+      },
+      "doc": "Type of authorization event"
+    },
+    {
+      "name": "resource_type",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Type of resource accessed"
+    },
+    {
+      "name": "resource_id",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Identifier of resource accessed"
+    },
+    {
+      "name": "action",
+      "type": "string",
+      "doc": "Action attempted (read, write, delete, execute)"
+    },
+    {
+      "name": "decision",
+      "type": {
+        "type": "enum",
+        "name": "AuthzDecision",
+        "symbols": ["ALLOW", "DENY", "NOT_APPLICABLE"]
+      },
+      "doc": "Authorization decision"
+    },
+    {
+      "name": "policy_id",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Policy that made the decision"
+    },
+    {
+      "name": "source_ip",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Source IP address"
+    },
+    {
+      "name": "metadata",
+      "type": {
+        "type": "map",
+        "values": "string"
+      },
+      "default": {},
+      "doc": "Additional metadata"
+    }
+  ]
+}

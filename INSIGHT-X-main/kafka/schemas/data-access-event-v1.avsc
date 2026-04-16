@@ -1,0 +1,115 @@
+{
+  "type": "record",
+  "name": "DataAccessEvent",
+  "namespace": "com.insightx.events",
+  "doc": "Data access event schema for file/database/API access",
+  "fields": [
+    {
+      "name": "event_id",
+      "type": "string",
+      "doc": "Unique event identifier (UUID)"
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "logicalType": "timestamp-millis",
+      "doc": "Event timestamp in milliseconds since epoch"
+    },
+    {
+      "name": "user_id",
+      "type": "string",
+      "doc": "User identifier"
+    },
+    {
+      "name": "source_system",
+      "type": "string",
+      "doc": "Source system (DLP, SharePoint, Database, etc.)"
+    },
+    {
+      "name": "event_type",
+      "type": {
+        "type": "enum",
+        "name": "DataAccessEventType",
+        "symbols": [
+          "FILE_OPEN",
+          "FILE_DOWNLOAD",
+          "FILE_UPLOAD",
+          "FILE_DELETE",
+          "FILE_SHARE",
+          "DATABASE_QUERY",
+          "API_CALL",
+          "DATA_EXPORT",
+          "BULK_DOWNLOAD"
+        ]
+      },
+      "doc": "Type of data access event"
+    },
+    {
+      "name": "resource_path",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Path to the resource (file path, database table, API endpoint)"
+    },
+    {
+      "name": "resource_id",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Unique resource identifier"
+    },
+    {
+      "name": "resource_owner",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Owner of the resource"
+    },
+    {
+      "name": "data_classification",
+      "type": ["null", {
+        "type": "enum",
+        "name": "DataClassification",
+        "symbols": ["PUBLIC", "INTERNAL", "CONFIDENTIAL", "RESTRICTED", "CRITICAL"]
+      }],
+      "default": null,
+      "doc": "Data classification level"
+    },
+    {
+      "name": "file_size_bytes",
+      "type": ["null", "long"],
+      "default": null,
+      "doc": "File size in bytes (if applicable)"
+    },
+    {
+      "name": "row_count",
+      "type": ["null", "int"],
+      "default": null,
+      "doc": "Number of rows accessed (for database queries)"
+    },
+    {
+      "name": "dlp_violation",
+      "type": "boolean",
+      "default": false,
+      "doc": "Whether DLP policy was violated"
+    },
+    {
+      "name": "dlp_policy_id",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "DLP policy violated (if any)"
+    },
+    {
+      "name": "source_ip",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Source IP address"
+    },
+    {
+      "name": "metadata",
+      "type": {
+        "type": "map",
+        "values": "string"
+      },
+      "default": {},
+      "doc": "Additional metadata"
+    }
+  ]
+}

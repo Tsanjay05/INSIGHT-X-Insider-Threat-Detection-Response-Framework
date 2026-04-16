@@ -1,0 +1,18 @@
+{
+  "mappings": {
+    "properties": {
+      "case_id": { "type": "keyword" },
+      "event_id": { "type": "keyword" },
+      "timestamp": { "type": "date" },
+      "user_id": { "type": "keyword" },
+      "event_type": { "type": "keyword" },
+      "description": { "type": "text" },
+      "provenance": { "type": "object", "enabled": false },
+      "signals": { "type": "nested" }
+    }
+  },
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  }
+}

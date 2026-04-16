@@ -1,0 +1,125 @@
+# INSIGHT-X Kafka Topics - Complete Configuration
+# Enhanced with back-pressure, DLQ, exactly-once semantics, and event replay
+
+topics:
+  # Authentication Events
+  - name: insightx.auth.events
+    partitions: 6
+    replication-factor: 3
+    config:
+      retention.ms: 2592000000  # 30 days for replay capability
+      retention.bytes: -1  # No size limit
+      compression.type: snappy
+      min.insync.replicas: 2
+      message.max.bytes: 1048576  # 1MB max message size
+      segment.ms: 86400000  # 1 day segments
+      cleanup.policy: delete
+
+  # Authorization Events
+  - name: insightx.authz.events
+    partitions: 6
+    replication-factor: 3
+    config:
+      retention.ms: 2592000000
+      compression.type: snappy
+      min.insync.replicas: 2
+      message.max.bytes: 1048576
+
+  # Data Access Events  
+  - name: insightx.data-access.events
+    partitions: 12
+    replication-factor: 3
+    config:
+      retention.ms: 2592000000
+      compression.type: snappy
+      min.insync.replicas: 2
+      message.max.bytes: 1048576
+
+  # Privileged Operations Events
+  - name: insightx.privileged-ops.events
+    partitions: 6
+    replication-factor: 3
+    config:
+      retention.ms: 2592000000
+      compression.type: snappy
+      min.insync.replicas: 2
+      message.max.bytes: 1048576
+
+  # Workflow Events
+  - name: insightx.workflow.events
+    partitions: 6
+    replication-factor: 3
+    config:
+      retention.ms: 2592000000
+      compression.type: snappy
+      min.insync.replicas: 2
+      message.max.bytes: 1048576
+
+  # Enriched Events (after correlation)
+  - name: insightx.enriched.events
+    partitions: 12
+    replication-factor: 3
+    config:
+      retention.ms: 2592000000
+      compression.type: snappy
+      min.insync.replicas: 2
+      message.max.bytes: 2097152  # 2MB for enriched events
+
+  # Dead Letter Queue Topics
+  - name: insightx.auth.events.dlq
+    partitions: 3
+    replication-factor: 3
+    config:
+      retention.ms: 604800000  # 7 days
+      compression.type: snappy
+
+  - name: insightx.authz.events.dlq
+    partitions: 3
+    replication-factor: 3
+    config:
+      retention.ms: 604800000
+
+  - name: insightx.data-access.events.dlq
+    partitions: 3
+    replication-factor: 3
+    config:
+      retention.ms: 604800000
+
+  - name: insightx.privileged-ops.events.dlq
+    partitions: 3
+    replication-factor: 3
+    config:
+      retention.ms: 604800000
+
+  - name: insightx.workflow.events.dlq
+    partitions: 3
+    replication-factor: 3
+    config:
+      retention.ms: 604800000
+
+  - name: insightx.enriched.events.dlq
+    partitions: 3
+    replication-factor: 3
+    config:
+      retention.ms: 604800000
+
+  # State Topics (for stateful stream processing)
+  - name: insightx.trust.state
+    partitions: 6
+    replication-factor: 3
+    config:
+      retention.ms: -1  # Infinite retention
+      cleanup.policy: compact  # Log compaction for state
+      compression.type: snappy
+      min.insync.replicas: 2
+      segment.ms: 86400000
+      delete.retention.ms: 86400000  # 1 day tombstone retention
+
+  - name: insightx.user.behavioral.state
+    partitions: 6
+    replication-factor: 3
+    config:
+      retention.ms: -1
+      cleanup.policy: compact
+      compression.type: snappy
+      min.insync.replicas: 2

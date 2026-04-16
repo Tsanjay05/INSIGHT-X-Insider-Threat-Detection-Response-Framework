@@ -1,0 +1,26 @@
+{
+  "title": "INSIGHT-X Trust Evaluation",
+  "tags": ["insightx", "trust", "latency"],
+  "panels": [
+    {
+      "title": "Trust Evaluation Latency (p95/p99)",
+      "type": "timeseries",
+      "targets": []
+    },
+    {
+      "title": "Policy Execution Metrics",
+      "type": "timeseries",
+      "targets": []
+    },
+    {
+      "title": "Signal Drift Detection",
+      "type": "stat",
+      "targets": []
+    },
+    {
+      "title": "Compliance Reporting",
+      "type": "table",
+      "targets": []
+    }
+  ]
+}

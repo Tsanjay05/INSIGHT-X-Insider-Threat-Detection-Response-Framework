@@ -1,0 +1,47 @@
+{{- if and .Values.provenance.enabled .Values.provenance.autoscaling.enabled }}
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "insightx.fullname" . }}-provenance
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: provenance
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ include "insightx.fullname" . }}-provenance
+  minReplicas: {{ .Values.provenance.autoscaling.minReplicas }}
+  maxReplicas: {{ .Values.provenance.autoscaling.maxReplicas }}
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: {{ .Values.provenance.autoscaling.targetCPUUtilizationPercentage }}
+  {{- if .Values.provenance.autoscaling.targetMemoryUtilizationPercentage }}
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: {{ .Values.provenance.autoscaling.targetMemoryUtilizationPercentage }}
+  {{- end }}
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 300
+      policies:
+      - type: Percent
+        value: 50
+        periodSeconds: 60
+      selectPolicy: Min
+    scaleUp:
+      stabilizationWindowSeconds: 0
+      policies:
+      - type: Percent
+        value: 100
+        periodSeconds: 30
+      selectPolicy: Max
+{{- end }}

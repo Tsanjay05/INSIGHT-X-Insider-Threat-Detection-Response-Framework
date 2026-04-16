@@ -1,0 +1,11 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/insightx
+    username: insightx
+    password: insightx
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/insightx
+    user: insightx
+    password: insightx
+    locations: classpath:db/migration

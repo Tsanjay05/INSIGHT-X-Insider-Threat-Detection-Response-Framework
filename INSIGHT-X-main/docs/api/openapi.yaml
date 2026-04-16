@@ -1,0 +1,37 @@
+openapi: 3.0.3
+info:
+  title: INSIGHT-X API
+  version: 0.1.0
+  description: REST API for INSIGHT-X Insider Threat Detection Platform
+
+paths:
+  /api/v1/trust/{userId}:
+    get:
+      summary: Get user trust state
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Trust state
+  /api/v1/cases:
+    get:
+      summary: List cases
+      responses:
+        '200':
+          description: Case list
+  /api/v1/cases/{caseId}:
+    get:
+      summary: Get case detail
+      parameters:
+        - name: caseId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Case detail

@@ -1,0 +1,135 @@
+{
+  "type": "record",
+  "name": "EnrichedEvent",
+  "namespace": "com.insightx.events",
+  "doc": "Enriched event schema combining multiple signals with context and analysis",
+  "fields": [
+    {
+      "name": "event_id",
+      "type": "string",
+      "doc": "Unique enriched event identifier (UUID)"
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "logicalType": "timestamp-millis",
+      "doc": "Event timestamp in milliseconds since epoch"
+    },
+    {
+      "name": "user_id",
+      "type": "string",
+      "doc": "User identifier"
+    },
+    {
+      "name": "correlation_id",
+      "type": "string",
+      "doc": "Correlation ID grouping related events"
+    },
+    {
+      "name": "source_event_ids",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "doc": "List of source event IDs that were correlated"
+    },
+    {
+      "name": "event_types",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "doc": "Types of events included"
+    },
+    {
+      "name": "trust_score",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Current trust score (0.0 - 1.0)"
+    },
+    {
+      "name": "trust_delta",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Change in trust score"
+    },
+    {
+      "name": "risk_indicators",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "RiskIndicator",
+          "fields": [
+            {"name": "type", "type": "string"},
+            {"name": "severity", "type": "string"},
+            {"name": "confidence", "type": "double"},
+            {"name": "description", "type": "string"}
+          ]
+        }
+      },
+      "default": [],
+      "doc": "Detected risk indicators"
+    },
+    {
+      "name": "behavioral_anomalies",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "Anomaly",
+          "fields": [
+            {"name": "type", "type": "string"},
+            {"name": "baseline_value", "type": "double"},
+            {"name": "observed_value", "type": "double"},
+            {"name": "deviation_score", "type": "double"}
+          ]
+        }
+      },
+      "default": [],
+      "doc": "Behavioral anomalies detected"
+    },
+    {
+      "name": "intent_hypotheses",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "IntentHypothesis",
+          "fields": [
+            {"name": "hypothesis_type", "type": "string"},
+            {"name": "confidence", "type": "double"},
+            {"name": "supporting_evidence", "type": {"type": "array", "items": "string"}}
+          ]
+        }
+      },
+      "default": [],
+      "doc": "Intent inference hypotheses"
+    },
+    {
+      "name": "context",
+      "type": {
+        "type": "record",
+        "name": "EventContext",
+        "fields": [
+          {"name": "time_of_day", "type": ["null", "string"], "default": null},
+          {"name": "day_of_week", "type": ["null", "string"], "default": null},
+          {"name": "is_business_hours", "type": "boolean", "default": true},
+          {"name": "source_ip", "type": ["null", "string"], "default": null},
+          {"name": "location", "type": ["null", "string"], "default": null},
+          {"name": "device_type", "type": ["null", "string"], "default": null}
+        ]
+      },
+      "doc": "Contextual information"
+    },
+    {
+      "name": "metadata",
+      "type": {
+        "type": "map",
+        "values": "string"
+      },
+      "default": {},
+      "doc": "Additional metadata"
+    }
+  ]
+}

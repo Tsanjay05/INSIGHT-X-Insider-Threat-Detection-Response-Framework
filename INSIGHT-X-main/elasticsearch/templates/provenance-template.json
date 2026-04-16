@@ -1,0 +1,147 @@
+{
+    "index_patterns": [
+        "insightx-provenance-*"
+    ],
+    "version": 1,
+    "priority": 200,
+    "template": {
+        "settings": {
+            "number_of_shards": 3,
+            "number_of_replicas": 2,
+            "index.lifecycle.name": "insightx-provenance-policy",
+            "index.lifecycle.rollover_alias": "insightx-provenance",
+            "refresh_interval": "5s",
+            "codec": "best_compression",
+            "index.mapping.total_fields.limit": 2000,
+            "index.query.default_field": [
+                "event_type",
+                "user_id",
+                "description"
+            ]
+        },
+        "mappings": {
+            "properties": {
+                "@timestamp": {
+                    "type": "date",
+                    "format": "strict_date_optional_time||epoch_millis"
+                },
+                "event_id": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "event_type": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "user_id": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "action": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "resource_type": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "resource_id": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "source_system": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "description": {
+                    "type": "text",
+                    "analyzer": "standard",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "severity": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "decision": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "trust_score_before": {
+                    "type": "float"
+                },
+                "trust_score_after": {
+                    "type": "float"
+                },
+                "trust_score_delta": {
+                    "type": "float"
+                },
+                "hash_chain": {
+                    "type": "object",
+                    "properties": {
+                        "previous_hash": {
+                            "type": "keyword",
+                            "index": false
+                        },
+                        "current_hash": {
+                            "type": "keyword",
+                            "index": true
+                        },
+                        "block_number": {
+                            "type": "long"
+                        },
+                        "merkle_root": {
+                            "type": "keyword",
+                            "index": false
+                        }
+                    }
+                },
+                "provenance": {
+                    "type": "object",
+                    "properties": {
+                        "signal_count": {
+                            "type": "integer"
+                        },
+                        "confidence": {
+                            "type": "float"
+                        },
+                        "sources": {
+                            "type": "keyword"
+                        },
+                        "correlation_id": {
+                            "type": "keyword",
+                            "index": true
+                        }
+                    }
+                },
+                "metadata": {
+                    "type": "object",
+                    "enabled": true,
+                    "dynamic": true
+                },
+                "input": {
+                    "type": "object",
+                    "enabled": false
+                },
+                "output": {
+                    "type": "object",
+                    "enabled": false
+                },
+                "created_at": {
+                    "type": "date"
+                },
+                "ingested_at": {
+                    "type": "date"
+                }
+            }
+        }
+    },
+    "_meta": {
+        "description": "Index template for INSIGHT-X provenance and audit logs with hash-chained integrity",
+        "version": "1.0.0"
+    }
+}

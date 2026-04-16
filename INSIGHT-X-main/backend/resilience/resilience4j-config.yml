@@ -1,0 +1,179 @@
+# Resilience4j Circuit Breaker Configuration for INSIGHT-X
+# Protects against cascading failures across microservices
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+        slidingWindowSize: 100
+        minimumNumberOfCalls: 10
+        permittedNumberOfCallsInHalfOpenState: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 60s
+        failureRateThreshold: 50
+        slowCallRateThreshold: 100
+        slowCallDurationThreshold: 3s
+        recordExceptions:
+          - org.springframework.web.client.HttpServerErrorException
+          - java.io.IOException
+          - java.util.concurrent.TimeoutException
+        ignoreExceptions:
+          - com.insightx.exception.BusinessException
+    
+    instances:
+      trustEngineService:
+        baseConfig: default
+        slidingWindowSize: 50
+        failureRateThreshold: 40
+        waitDurationInOpenState: 30s
+        slowCallDurationThreshold: 2s
+      
+      intentService:
+        baseConfig: default
+        slidingWindowSize: 30
+        failureRateThreshold: 60
+        waitDurationInOpenState: 45s
+        slowCallDurationThreshold: 5s
+      
+      graphService:
+        baseConfig: default
+        slidingWindowSize: 50
+        failureRateThreshold: 50
+        waitDurationInOpenState: 60s
+      
+      controlsService:
+        baseConfig: default
+        slidingWindowSize: 100
+        failureRateThreshold: 30
+        waitDurationInOpenState: 30s
+      
+      opaService:
+        baseConfig: default
+        slidingWindowSize: 100
+        failureRateThreshold: 20
+        waitDurationInOpenState: 45s
+      
+      postgresService:
+        baseConfig: default
+        slidingWindowSize: 200
+        failureRateThreshold: 40
+        waitDurationInOpenState: 60s
+      
+      neo4jService:
+        baseConfig: default
+        slidingWindowSize: 100
+        failureRateThreshold: 50
+        waitDurationInOpenState: 60s
+      
+      kafkaProducerService:
+        baseConfig: default
+        slidingWindowSize: 200
+        failureRateThreshold: 30
+        waitDurationInOpenState: 30s
+
+# Retry Configuration
+  retry:
+    configs:
+      default:
+        maxAttempts: 3
+        waitDuration: 1s
+        retryExceptions:
+          - org.springframework.web.client.HttpServerErrorException
+          - java.io.IOException
+        ignoreExceptions:
+          - com.insightx.exception.ValidationException
+    
+    instances:
+      trustEngineService:
+        baseConfig: default
+        maxAttempts: 3
+        waitDuration: 500ms
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2
+      
+      opaService:
+        baseConfig: default
+        maxAttempts: 2
+        waitDuration: 200ms
+      
+      postgresService:
+        baseConfig: default
+        maxAttempts: 5
+        waitDuration: 1s
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 1.5
+
+# Bulkhead Configuration (Thread pool isolation)
+  bulkhead:
+    configs:
+      default:
+        maxConcurrentCalls: 100
+        maxWaitDuration: 500ms
+    
+    instances:
+      trustEngineService:
+        maxConcurrentCalls: 50
+        maxWaitDuration: 2s
+      
+      intentService:
+        maxConcurrentCalls: 20
+        maxWaitDuration: 5s
+      
+      graphService:
+        maxConcurrentCalls: 30
+        maxWaitDuration: 3s
+
+# Thread Pool Bulkhead (for async operations)
+  thread-pool-bulkhead:
+    configs:
+      default:
+        maxThreadPoolSize: 50
+        coreThreadPoolSize: 25
+        queueCapacity: 100
+        keepAliveDuration: 20s
+    
+    instances:
+      asyncTrustComputation:
+        maxThreadPoolSize: 20
+        coreThreadPoolSize: 10
+        queueCapacity: 50
+
+# Rate Limiter Configuration
+  ratelimiter:
+    configs:
+      default:
+        registerHealthIndicator: true
+        limitForPeriod: 100
+        limitRefreshPeriod: 1s
+        timeoutDuration: 500ms
+    
+    instances:
+      apiGateway:
+        limitForPeriod: 1000
+        limitRefreshPeriod: 1s
+      
+      trustEngineApi:
+        limitForPeriod: 500
+        limitRefreshPeriod: 1s
+      
+      opaApi:
+        limitForPeriod: 2000
+        limitRefreshPeriod: 1s
+
+# Time Limiter Configuration
+  timelimiter:
+    configs:
+      default:
+        timeoutDuration: 5s
+        cancelRunningFuture: true
+    
+    instances:
+      trustEngineService:
+        timeoutDuration: 3s
+      
+      intentService:
+        timeoutDuration: 10s
+      
+      graphService:
+        timeoutDuration: 5s

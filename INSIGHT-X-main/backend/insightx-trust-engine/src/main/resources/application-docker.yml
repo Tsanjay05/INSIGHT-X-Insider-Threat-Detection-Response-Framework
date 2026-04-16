@@ -1,0 +1,28 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://postgres:5432/insightx
+    username: insightx
+    password: insightx
+    pool:
+      initial-size: 5
+      max-size: 10
+      max-idle-time: 30m
+      validation-query: SELECT 1
+  flyway:
+    url: jdbc:postgresql://postgres:5432/insightx?options=-c%20timezone=UTC
+    user: insightx
+    password: insightx
+  kafka:
+    bootstrap-servers: kafka:29092
+    properties:
+      reconnect.backoff.ms: 1000
+      reconnect.backoff.max.ms: 10000
+      connections.max.idle.ms: 540000
+      request.timeout.ms: 30000
+    consumer:
+      properties:
+        session.timeout.ms: 30000
+        heartbeat.interval.ms: 10000
+    producer:
+      properties:
+        max.block.ms: 30000

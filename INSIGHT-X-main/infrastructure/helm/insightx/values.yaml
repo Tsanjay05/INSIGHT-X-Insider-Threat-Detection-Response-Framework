@@ -1,0 +1,465 @@
+# INSIGHT-X Helm Chart Values - Complete Configuration
+# Production-ready deployment for enterprise insider threat detection platform
+
+global:
+  namespace: insightx
+  imageRegistry: ghcr.io/insightx
+  imagePullPolicy: IfNotPresent
+  
+  # Common labels applied to all resources
+  labels:
+    app.kubernetes.io/part-of: insightx
+    app.kubernetes.io/managed-by: helm
+  
+  # Security context for all pods
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+    fsGroup: 1000
+    seccompProfile:
+      type: RuntimeDefault
+  
+  # Common environment variables
+  env:
+    JAVA_OPTS: "-XX:+UseG1GC -XX:MaxRAMPercentage=75.0 -XX:+HeapDumpOnOutOfMemoryError"
+    SPRING_PROFILES_ACTIVE: "kubernetes"
+    OTEL_EXPORTER_OTLP_ENDPOINT: "http://opentelemetry-collector:4317"
+    OTEL_SERVICE_NAME: "{{ .Chart.Name }}"
+
+# =============================================================================
+# DATA INGESTION SERVICE
+# =============================================================================
+ingestion:
+  enabled: true
+  replicaCount: 2
+  
+  image:
+    repository: insightx-ingestion
+    tag: "1.0.0"
+  
+  service:
+    type: ClusterIP
+    port: 8080
+    targetPort: 8080
+  
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      cpu: 2
+      memory: 4Gi
+  
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 80
+  
+  env:
+    KAFKA_BOOTSTRAP_SERVERS: "kafka:9092"
+    KAFKA_SCHEMA_REGISTRY_URL: "http://schema-registry:8081"
+    CONNECTOR_POLL_INTERVAL: "30"
+  
+  connectors:
+    okta:
+      enabled: true
+      orgUrl: "${OKTA_ORG_URL}"
+      apiToken: "${OKTA_API_TOKEN}"
+    azureAd:
+      enabled: true
+      tenantId: "${AZURE_TENANT_ID}"
+      clientId: "${AZURE_CLIENT_ID}"
+      clientSecret: "${AZURE_CLIENT_SECRET}"
+    dlp:
+      enabled: true
+      apiUrl: "${DLP_API_URL}"
+      apiKey: "${DLP_API_KEY}"
+
+# =============================================================================
+# TRUST ENGINE SERVICE
+# =============================================================================
+trustEngine:
+  enabled: true
+  replicaCount: 3
+  
+  image:
+    repository: insightx-trust-engine
+    tag: "1.0.0"
+  
+  service:
+    type: ClusterIP
+    port: 8081
+    targetPort: 8081
+    grpc:
+      port: 9091
+      targetPort: 9091
+  
+  resources:
+    requests:
+      cpu: 1
+      memory: 2Gi
+    limits:
+      cpu: 4
+      memory: 8Gi
+  
+  autoscaling:
+    enabled: true
+    minReplicas: 3
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 80
+  
+  env:
+    KAFKA_BOOTSTRAP_SERVERS: "kafka:9092"
+    POSTGRES_HOST: "postgresql"
+    POSTGRES_DB: "insightx_trust"
+    POSTGRES_USER: "${POSTGRES_USER}"
+    POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+    OPA_URL: "http://opa:8181"
+  
+  database:
+    maxConnections: 50
+    minIdle: 10
+    connectionTimeout: 30000
+
+# =============================================================================
+# INTENT SERVICE
+# =============================================================================
+intent:
+  enabled: true
+  replicaCount: 2
+  
+  image:
+    repository: insightx-intent
+    tag: "1.0.0"
+  
+  service:
+    type: ClusterIP
+    port: 8082
+    targetPort: 8082
+  
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      cpu: 2
+      memory: 4Gi
+  
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 80
+  
+  env:
+    KAFKA_BOOTSTRAP_SERVERS: "kafka:9092"
+    ML_MODEL_PATH: "/models/intent-classifier"
+    CONFIDENCE_THRESHOLD: "0.7"
+
+# =============================================================================
+# GRAPH SERVICE
+# =============================================================================
+graph:
+  enabled: true
+  replicaCount: 2
+  
+  image:
+    repository: insightx-graph
+    tag: "1.0.0"
+  
+  service:
+    type: ClusterIP
+    port: 8083
+    targetPort: 8083
+  
+  resources:
+    requests:
+      cpu: 1
+      memory: 2Gi
+    limits:
+      cpu: 4
+      memory: 8Gi
+  
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 80
+  
+  env:
+    KAFKA_BOOTSTRAP_SERVERS: "kafka:9092"
+    NEO4J_URI: "bolt://neo4j:7687"
+    NEO4J_USER: "${NEO4J_USER}"
+    NEO4J_PASSWORD: "${NEO4J_PASSWORD}"
+    MAX_GRAPH_DEPTH: "5"
+
+# =============================================================================
+# CONTROLS SERVICE
+# =============================================================================
+controls:
+  enabled: true
+  replicaCount: 2
+  
+  image:
+    repository: insightx-controls
+    tag: "1.0.0"
+  
+  service:
+    type: ClusterIP
+    port: 8084
+    targetPort: 8084
+  
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      cpu: 2
+      memory: 4Gi
+  
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 80
+  
+  env:
+    KAFKA_BOOTSTRAP_SERVERS: "kafka:9092"
+    POSTGRES_HOST: "postgresql"
+    POSTGRES_DB: "insightx_controls"
+    POSTGRES_USER: "${POSTGRES_USER}"
+    POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+    OPA_URL: "http://opa:8181"
+    KEYCLOAK_URL: "http://keycloak:8080"
+    KEYCLOAK_REALM: "insightx"
+
+# =============================================================================
+# PROVENANCE SERVICE
+# =============================================================================
+provenance:
+  enabled: true
+  replicaCount: 2
+  
+  image:
+    repository: insightx-provenance
+    tag: "1.0.0"
+  
+  service:
+    type: ClusterIP
+    port: 8085
+    targetPort: 8085
+  
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      cpu: 2
+      memory: 4Gi
+  
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 80
+  
+  env:
+    KAFKA_BOOTSTRAP_SERVERS: "kafka:9092"
+    ELASTICSEARCH_URL: "http://elasticsearch:9200"
+    ELASTICSEARCH_USER: "${ELASTICSEARCH_USER}"
+    ELASTICSEARCH_PASSWORD: "${ELASTICSEARCH_PASSWORD}"
+    HASH_CHAINING_ENABLED: "true"
+
+# =============================================================================
+# API GATEWAY SERVICE
+# =============================================================================
+apiGateway:
+  enabled: true
+  replicaCount: 3
+  
+  image:
+    repository: insightx-api-gateway
+    tag: "1.0.0"
+  
+  service:
+    type: LoadBalancer
+    port: 443
+    targetPort: 8443
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+      service.beta.kubernetes.io/aws-load-balancer-ssl-cert: "${SSL_CERTIFICATE_ARN}"
+  
+  resources:
+    requests:
+      cpu: 1
+      memory: 2Gi
+    limits:
+      cpu: 4
+      memory: 8Gi
+  
+  autoscaling:
+    enabled: true
+    minReplicas: 3
+    maxReplicas: 15
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 80
+  
+  env:
+    KEYCLOAK_URL: "http://keycloak:8080"
+    KEYCLOAK_REALM: "insightx"
+    KEYCLOAK_CLIENT_ID: "insightx-api-gateway"
+    KEYCLOAK_CLIENT_SECRET: "${KEYCLOAK_CLIENT_SECRET}"
+    CORS_ALLOWED_ORIGINS: "${CORS_ALLOWED_ORIGINS}"
+    RATE_LIMIT_REQUESTS_PER_SECOND: "100"
+  
+  ingress:
+    enabled: true
+    className: nginx
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+      nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    hosts:
+      - host: api.insightx.example.com
+        paths:
+          - path: /
+            pathType: Prefix
+    tls:
+      - secretName: insightx-api-tls
+        hosts:
+          - api.insightx.example.com
+
+# =============================================================================
+# MULTI-REGION DATA RESIDENCY
+# =============================================================================
+dataResidency:
+  enabled: false
+  defaultRegion: "us-east-1"
+  regions:
+    - name: us-east-1
+      storageClass: gp3
+      kafka:
+        replicationFactor: 3
+      postgres:
+        replication:
+          enabled: true
+          replicas: 2
+    - name: eu-west-1
+      storageClass: gp3
+      kafka:
+        replicationFactor: 3
+      postgres:
+        replication:
+          enabled: true
+          replicas: 2
+    - name: ap-southeast-1
+      storageClass: gp3
+      kafka:
+        replicationFactor: 3
+      postgres:
+        replication:
+          enabled: true
+          replicas: 2
+
+# =============================================================================
+# FAULT ISOLATION ZONES
+# =============================================================================
+faultIsolation:
+  enabled: true
+  zones:
+    - name: zone-a
+      nodeSelector:
+        topology.kubernetes.io/zone: "{{ .Values.global.region }}-a"
+    - name: zone-b
+      nodeSelector:
+        topology.kubernetes.io/zone: "{{ .Values.global.region }}-b"
+    - name: zone-c
+      nodeSelector:
+        topology.kubernetes.io/zone: "{{ .Values.global.region }}-c"
+  
+  # Pod anti-affinity to spread across zones
+  podAntiAffinity:
+    enabled: true
+    type: soft  # soft or hard
+
+# =============================================================================
+# OBSERVABILITY
+# =============================================================================
+observability:
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+      interval: 30s
+      scrapeTimeout: 10s
+  
+  tracing:
+    enabled: true
+    samplingRate: 0.1
+    exporter: otlp
+  
+  logging:
+    level: INFO
+    format: json
+    outputs:
+      - stdout
+      - file
+    fileOutput:
+      path: /var/log/insightx
+      maxSize: 100Mi
+      maxBackups: 10
+
+# =============================================================================
+# SECURITY
+# =============================================================================
+security:
+  podSecurityPolicy:
+    enabled: true
+  
+  networkPolicy:
+    enabled: true
+    defaultDeny: true
+  
+  podDisruptionBudget:
+    enabled: true
+    minAvailable: 1
+  
+  secrets:
+    # External secrets operator integration
+    externalSecrets:
+      enabled: true
+      backend: aws-secrets-manager
+      region: us-east-1
+  
+  # Service mesh integration
+  serviceMesh:
+    enabled: false
+    type: istio  # istio or linkerd
+
+# =============================================================================
+# BACKUP & DISASTER RECOVERY
+# =============================================================================
+backup:
+  enabled: true
+  schedule: "0 2 * * *"  # 2 AM daily
+  retention:
+    daily: 7
+    weekly: 4
+    monthly: 12
+  
+  storageLocation:
+    type: s3
+    bucket: insightx-backups
+    region: us-east-1
+  
+  components:
+    postgres: true
+    neo4j: true
+    elasticsearch: true

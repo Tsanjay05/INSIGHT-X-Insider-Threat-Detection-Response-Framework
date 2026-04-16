@@ -1,0 +1,274 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.insightx:insightx-graph >---------------------
+[INFO] Building INSIGHT-X Temporal Graph Intelligence Service 0.1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.1:tree (default-cli) @ insightx-graph ---
+[INFO] com.insightx:insightx-graph:jar:0.1.0-SNAPSHOT
+[INFO] +- org.springframework.boot:spring-boot-starter-webflux:jar:3.2.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:3.2.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:3.2.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:3.2.0:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.2.0:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.4.11:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.4.11:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.21.1:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:2.0.9:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:2.2:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:3.2.0:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.15.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.15.3:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.15.3:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-reactor-netty:jar:3.2.0:compile
+[INFO] |  |  \- io.projectreactor.netty:reactor-netty-http:jar:1.1.13:compile
+[INFO] |  |     +- io.netty:netty-codec-http:jar:4.1.101.Final:compile
+[INFO] |  |     |  +- io.netty:netty-common:jar:4.1.101.Final:compile
+[INFO] |  |     |  +- io.netty:netty-buffer:jar:4.1.101.Final:compile
+[INFO] |  |     |  +- io.netty:netty-transport:jar:4.1.101.Final:compile
+[INFO] |  |     |  \- io.netty:netty-codec:jar:4.1.101.Final:compile
+[INFO] |  |     +- io.netty:netty-codec-http2:jar:4.1.101.Final:compile
+[INFO] |  |     +- io.netty:netty-resolver-dns:jar:4.1.101.Final:compile
+[INFO] |  |     |  +- io.netty:netty-resolver:jar:4.1.101.Final:compile
+[INFO] |  |     |  \- io.netty:netty-codec-dns:jar:4.1.101.Final:compile
+[INFO] |  |     +- io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.101.Final:compile
+[INFO] |  |     |  \- io.netty:netty-resolver-dns-classes-macos:jar:4.1.101.Final:compile
+[INFO] |  |     +- io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.101.Final:compile
+[INFO] |  |     |  +- io.netty:netty-transport-native-unix-common:jar:4.1.101.Final:compile
+[INFO] |  |     |  \- io.netty:netty-transport-classes-epoll:jar:4.1.101.Final:compile
+[INFO] |  |     \- io.projectreactor.netty:reactor-netty-core:jar:1.1.13:compile
+[INFO] |  |        \- io.netty:netty-handler-proxy:jar:4.1.101.Final:compile
+[INFO] |  |           \- io.netty:netty-codec-socks:jar:4.1.101.Final:compile
+[INFO] |  +- org.springframework:spring-web:jar:6.1.1:compile
+[INFO] |  |  \- org.springframework:spring-beans:jar:6.1.1:compile
+[INFO] |  \- org.springframework:spring-webflux:jar:6.1.1:compile
+[INFO] |     \- io.projectreactor:reactor-core:jar:3.6.0:compile
+[INFO] |        \- org.reactivestreams:reactive-streams:jar:1.0.4:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-data-neo4j:jar:3.2.0:compile
+[INFO] |  \- org.springframework.data:spring-data-neo4j:jar:7.2.0:compile
+[INFO] |     +- jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile
+[INFO] |     +- org.apiguardian:apiguardian-api:jar:1.1.1:compile
+[INFO] |     +- org.neo4j:neo4j-cypher-dsl:jar:2023.2.0:compile
+[INFO] |     +- org.neo4j.driver:neo4j-java-driver:jar:5.13.0:compile
+[INFO] |     |  +- io.netty:netty-handler:jar:4.1.101.Final:compile
+[INFO] |     |  \- io.netty:netty-tcnative-classes:jar:2.0.61.Final:compile
+[INFO] |     +- org.springframework.data:spring-data-commons:jar:3.2.0:compile
+[INFO] |     \- org.slf4j:slf4j-api:jar:2.0.9:compile
+[INFO] +- org.projectlombok:lombok:jar:1.18.30:provided
+[INFO] +- org.springframework.kafka:spring-kafka:jar:3.1.0:compile
+[INFO] |  +- org.springframework:spring-context:jar:6.1.1:compile
+[INFO] |  |  +- org.springframework:spring-aop:jar:6.1.1:compile
+[INFO] |  |  \- org.springframework:spring-expression:jar:6.1.1:compile
+[INFO] |  +- org.springframework:spring-messaging:jar:6.1.1:compile
+[INFO] |  +- org.springframework:spring-tx:jar:6.1.1:compile
+[INFO] |  +- org.springframework.retry:spring-retry:jar:2.0.4:compile
+[INFO] |  +- org.apache.kafka:kafka-clients:jar:3.6.0:compile
+[INFO] |  |  +- com.github.luben:zstd-jni:jar:1.5.5-1:runtime
+[INFO] |  |  +- org.lz4:lz4-java:jar:1.8.0:runtime
+[INFO] |  |  \- org.xerial.snappy:snappy-java:jar:1.1.10.4:runtime
+[INFO] |  +- io.micrometer:micrometer-observation:jar:1.12.0:compile
+[INFO] |  |  \- io.micrometer:micrometer-commons:jar:1.12.0:compile
+[INFO] |  \- com.google.code.findbugs:jsr305:jar:3.0.2:runtime
+[INFO] +- com.fasterxml.jackson.core:jackson-databind:jar:2.15.3:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.15.3:compile
+[INFO] |  \- com.fasterxml.jackson.core:jackson-core:jar:2.15.3:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:3.2.0:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:3.2.0:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:3.2.0:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.8.0:test
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.1:test
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:2.1.2:test
+[INFO] |  +- net.minidev:json-smart:jar:2.5.0:test
+[INFO] |  |  \- net.minidev:accessors-smart:jar:2.5.0:test
+[INFO] |  +- org.assertj:assertj-core:jar:3.24.2:test
+[INFO] |  |  \- net.bytebuddy:byte-buddy:jar:1.14.10:test
+[INFO] |  +- org.awaitility:awaitility:jar:4.2.0:test
+[INFO] |  +- org.hamcrest:hamcrest:jar:2.2:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.10.1:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.10.1:test
+[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[INFO] |  |  |  \- org.junit.platform:junit-platform-commons:jar:1.10.1:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.10.1:test
+[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.10.1:test
+[INFO] |  +- org.mockito:mockito-core:jar:5.7.0:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.14.10:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:3.3:test
+[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:5.7.0:test
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.1:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- org.springframework:spring-core:jar:6.1.1:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:6.1.1:compile
+[INFO] |  +- org.springframework:spring-test:jar:6.1.1:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.9.1:test
+[INFO] \- org.neo4j.test:neo4j-harness:jar:5.14.0:test
+[INFO]    +- org.neo4j:annotations:jar:5.14.0:test
+[INFO]    |  +- org.eclipse.collections:eclipse-collections:jar:11.1.0:test
+[INFO]    |  |  \- org.eclipse.collections:eclipse-collections-api:jar:11.1.0:test
+[INFO]    |  \- org.apache.commons:commons-lang3:jar:3.13.0:test
+[INFO]    +- org.neo4j:neo4j:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-fabric:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-front-end:jar:5.14.0:test
+[INFO]    |  |  |  +- org.neo4j:neo4j-expressions:jar:5.14.0:test
+[INFO]    |  |  |  \- org.neo4j:neo4j-cypher-macros:jar:5.14.0:test
+[INFO]    |  |  \- org.scala-lang:scala-reflect:jar:2.13.11:test
+[INFO]    |  +- org.neo4j:neo4j-query-router:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-procedure:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-procedure-api:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-codegen:jar:5.14.0:test
+[INFO]    |  |  |  +- org.ow2.asm:asm-util:jar:9.6:test
+[INFO]    |  |  |  +- org.ow2.asm:asm-analysis:jar:9.6:test
+[INFO]    |  |  |  \- org.ow2.asm:asm-tree:jar:9.6:test
+[INFO]    |  |  \- org.neo4j:neo4j-cypher-expression-evaluator:jar:5.14.0:test
+[INFO]    |  |     +- org.neo4j:neo4j-ast:jar:5.14.0:test
+[INFO]    |  |     \- org.neo4j:neo4j-cypher-ast-factory:jar:5.14.0:test
+[INFO]    |  |        \- org.neo4j:cypher-ast-factory:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-lucene-index:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-resource:jar:5.14.0:test
+[INFO]    |  |  +- org.apache.lucene:lucene-analysis-common:jar:9.8.0:test
+[INFO]    |  |  +- org.apache.lucene:lucene-core:jar:9.8.0:test
+[INFO]    |  |  +- org.apache.lucene:lucene-queryparser:jar:9.8.0:test
+[INFO]    |  |  \- org.apache.lucene:lucene-backward-codecs:jar:9.8.0:test
+[INFO]    |  +- org.neo4j:neo4j-fulltext-index:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-graph-algo:jar:5.14.0:test
+[INFO]    |  |  \- org.neo4j:neo4j-cypher-runtime-util:jar:5.14.0:test
+[INFO]    |  |     \- org.neo4j:neo4j-cypher-logical-plans:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-data-collector:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-cypher-planner:jar:5.14.0:test
+[INFO]    |  |  |  +- org.scala-lang.modules:scala-collection-contrib_2.13:jar:0.3.0:test
+[INFO]    |  |  |  +- org.neo4j:neo4j-cypher-ir:jar:5.14.0:test
+[INFO]    |  |  |  \- org.neo4j:neo4j-cypher-javacc-parser:jar:5.14.0:test
+[INFO]    |  |  \- org.neo4j:neo4j-rewriting:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-cypher:jar:5.14.0:test
+[INFO]    |  |  +- org.scala-lang:scala-library:jar:2.13.11:test
+[INFO]    |  |  +- org.neo4j:neo4j-cypher-physical-planning:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-exceptions:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-util:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-cypher-config:jar:5.14.0:test
+[INFO]    |  |  |  \- com.propensive:magnolia_2.13:jar:0.17.0:test
+[INFO]    |  |  |     \- com.propensive:mercator_2.13:jar:0.2.1:test
+[INFO]    |  |  +- org.neo4j:neo4j-cypher-cache:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-cypher-planner-spi:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-cypher-interpreted-runtime:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-cypher-slotted-runtime:jar:5.14.0:test
+[INFO]    |  |  +- org.apache.shiro:shiro-core:jar:1.12.0:test
+[INFO]    |  |  |  +- org.apache.shiro:shiro-lang:jar:1.12.0:test
+[INFO]    |  |  |  +- org.apache.shiro:shiro-cache:jar:1.12.0:test
+[INFO]    |  |  |  +- org.apache.shiro:shiro-crypto-hash:jar:1.12.0:test
+[INFO]    |  |  |  |  \- org.apache.shiro:shiro-crypto-core:jar:1.12.0:test
+[INFO]    |  |  |  +- org.apache.shiro:shiro-crypto-cipher:jar:1.12.0:test
+[INFO]    |  |  |  +- org.apache.shiro:shiro-config-core:jar:1.12.0:test
+[INFO]    |  |  |  +- org.apache.shiro:shiro-config-ogdl:jar:1.12.0:test
+[INFO]    |  |  |  |  \- commons-beanutils:commons-beanutils:jar:1.9.4:test
+[INFO]    |  |  |  |     \- commons-collections:commons-collections:jar:3.2.2:test
+[INFO]    |  |  |  \- org.apache.shiro:shiro-event:jar:1.12.0:test
+[INFO]    |  |  \- org.bitbucket.inkytonik.kiama:kiama_2.13:jar:2.5.1:test
+[INFO]    |  +- org.neo4j:neo4j-security:jar:5.14.0:test
+[INFO]    |  |  \- org.neo4j:neo4j-command-line:jar:5.14.0:test
+[INFO]    |  |     \- info.picocli:picocli:jar:4.7.5:test
+[INFO]    |  +- org.neo4j:neo4j-bolt:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-ssl:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:server-api:jar:5.14.0:test
+[INFO]    |  |  |  \- jakarta.ws.rs:jakarta.ws.rs-api:jar:3.1.0:test
+[INFO]    |  |  +- io.netty:netty-transport-native-epoll:jar:linux-aarch_64:4.1.101.Final:test
+[INFO]    |  |  +- io.netty:netty-transport-native-kqueue:jar:osx-x86_64:4.1.101.Final:test
+[INFO]    |  |  |  \- io.netty:netty-transport-classes-kqueue:jar:4.1.101.Final:test
+[INFO]    |  |  \- io.netty:netty-transport-native-kqueue:jar:osx-aarch_64:4.1.101.Final:test
+[INFO]    |  +- org.neo4j:neo4j-consistency-check:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-record-storage-engine:jar:5.14.0:test
+[INFO]    |  |  \- commons-io:commons-io:jar:2.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-dbms:jar:5.14.0:test
+[INFO]    |  |  +- org.jprocesses:jProcesses:jar:1.6.5:test
+[INFO]    |  |  |  \- com.profesorfalken:WMI4Java:jar:1.6.3:test
+[INFO]    |  |  |     \- com.profesorfalken:jPowerShell:jar:3.0:test
+[INFO]    |  |  +- org.apache.commons:commons-compress:jar:1.24.0:test
+[INFO]    |  |  +- org.apache.commons:commons-text:jar:1.10.0:test
+[INFO]    |  |  +- org.apache.commons:commons-configuration2:jar:2.9.0:test
+[INFO]    |  |  \- org.neo4j.licensing-proxy:zstd-proxy:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-import-tool:jar:5.14.0:test
+[INFO]    |  +- org.neo4j.app:neo4j-server:jar:5.14.0:test
+[INFO]    |  |  +- org.eclipse.jetty:jetty-server:jar:12.0.3:test
+[INFO]    |  |  |  +- org.eclipse.jetty:jetty-http:jar:12.0.3:test
+[INFO]    |  |  |  |  \- org.eclipse.jetty:jetty-util:jar:12.0.3:test
+[INFO]    |  |  |  \- org.eclipse.jetty:jetty-io:jar:12.0.3:test
+[INFO]    |  |  +- org.eclipse.jetty:jetty-webapp:jar:10.0.17:test
+[INFO]    |  |  |  +- org.eclipse.jetty:jetty-servlet:jar:10.0.17:test
+[INFO]    |  |  |  |  \- org.eclipse.jetty:jetty-security:jar:12.0.3:test
+[INFO]    |  |  |  \- org.eclipse.jetty:jetty-xml:jar:12.0.3:test
+[INFO]    |  |  +- org.glassfish.jersey.inject:jersey-hk2:jar:3.1.3:test
+[INFO]    |  |  |  +- org.glassfish.jersey.core:jersey-common:jar:3.1.3:test
+[INFO]    |  |  |  |  \- jakarta.inject:jakarta.inject-api:jar:2.0.1:test
+[INFO]    |  |  |  +- org.glassfish.hk2:hk2-locator:jar:3.0.4:test
+[INFO]    |  |  |  |  +- org.glassfish.hk2:hk2-api:jar:3.0.4:test
+[INFO]    |  |  |  |  \- org.glassfish.hk2:hk2-utils:jar:3.0.4:test
+[INFO]    |  |  |  \- org.javassist:javassist:jar:3.29.2-GA:test
+[INFO]    |  |  +- org.glassfish.jersey.containers:jersey-container-servlet:jar:3.1.3:test
+[INFO]    |  |  |  +- org.glassfish.jersey.containers:jersey-container-servlet-core:jar:3.1.3:test
+[INFO]    |  |  |  \- org.glassfish.jersey.core:jersey-server:jar:3.1.3:test
+[INFO]    |  |  |     +- org.glassfish.jersey.core:jersey-client:jar:3.1.3:test
+[INFO]    |  |  |     \- jakarta.validation:jakarta.validation-api:jar:3.0.2:test
+[INFO]    |  |  +- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.15.3:test
+[INFO]    |  |  |  +- com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.15.3:test
+[INFO]    |  |  |  \- com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.15.3:test
+[INFO]    |  |  \- org.glassfish.jaxb:jaxb-runtime:jar:4.0.4:test
+[INFO]    |  |     \- org.glassfish.jaxb:jaxb-core:jar:4.0.4:test
+[INFO]    |  |        +- org.eclipse.angus:angus-activation:jar:2.0.1:test
+[INFO]    |  |        +- org.glassfish.jaxb:txw2:jar:4.0.4:test
+[INFO]    |  |        \- com.sun.istack:istack-commons-runtime:jar:4.1.2:test
+[INFO]    |  +- org.neo4j:neo4j-capabilities:jar:5.14.0:test
+[INFO]    |  \- org.neo4j:neo4j-slf4j-provider:jar:5.14.0:test
+[INFO]    |     \- org.apache.logging.log4j:log4j-api:jar:2.21.1:compile
+[INFO]    +- org.neo4j:test-utils:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-common:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-io:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-unsafe:jar:5.14.0:test
+[INFO]    |  |  \- org.neo4j:neo4j-concurrent:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-graphdb-api:jar:5.14.0:test
+[INFO]    |  +- org.ow2.asm:asm:jar:9.6:test
+[INFO]    |  +- org.junit.platform:junit-platform-testkit:jar:1.10.1:test
+[INFO]    |  +- org.bouncycastle:bcpkix-jdk18on:jar:1.76:test
+[INFO]    |  |  \- org.bouncycastle:bcutil-jdk18on:jar:1.76:test
+[INFO]    |  \- org.bouncycastle:bcprov-jdk18on:jar:1.76:test
+[INFO]    +- org.neo4j:io-test-utils:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-collections:jar:5.14.0:test
+[INFO]    |  |  \- com.github.ben-manes.caffeine:caffeine:jar:3.1.8:test
+[INFO]    |  \- org.neo4j:neo4j-random-values:jar:5.14.0:test
+[INFO]    +- commons-logging:commons-logging:jar:1.2:test
+[INFO]    +- org.neo4j.app:neo4j-server-test-utils:jar:5.14.0:test
+[INFO]    +- commons-codec:commons-codec:jar:1.16.0:test
+[INFO]    +- org.neo4j:neo4j-kernel:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-native:jar:5.14.0:test
+[INFO]    |  |  \- net.java.dev.jna:jna:jar:5.13.0:test
+[INFO]    |  +- org.neo4j:neo4j-kernel-api:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-monitoring:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-diagnostics:jar:5.14.0:test
+[INFO]    |  |  +- org.neo4j:neo4j-schema:jar:5.14.0:test
+[INFO]    |  |  |  \- org.neo4j:neo4j-lock:jar:5.14.0:test
+[INFO]    |  |  \- org.neo4j:neo4j-token-api:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-storage-engine-util:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-values:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-logging:jar:5.14.0:test
+[INFO]    |  |  +- org.codehaus.jettison:jettison:jar:1.5.4:test
+[INFO]    |  |  +- org.apache.logging.log4j:log4j-core:jar:2.21.1:test
+[INFO]    |  |  \- org.apache.logging.log4j:log4j-layout-template-json:jar:2.21.1:test
+[INFO]    |  +- org.neo4j:neo4j-configuration:jar:5.14.0:test
+[INFO]    |  |  \- com.github.seancfoley:ipaddress:jar:5.4.0:test
+[INFO]    |  +- org.neo4j:neo4j-layout:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-index:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-spatial-index:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-id-generator:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-wal:jar:5.14.0:test
+[INFO]    |  +- org.neo4j:neo4j-import-util:jar:5.14.0:test
+[INFO]    |  |  \- org.neo4j:neo4j-csv:jar:5.14.0:test
+[INFO]    |  \- org.jctools:jctools-core:jar:4.0.1:test
+[INFO]    \- org.junit.vintage:junit-vintage-engine:jar:5.10.1:test
+[INFO]       +- org.junit.platform:junit-platform-engine:jar:1.10.1:test
+[INFO]       \- junit:junit:jar:4.13.2:test
+[INFO]          \- org.hamcrest:hamcrest-core:jar:2.2:test
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.129 s
+[INFO] Finished at: 2026-02-12T10:54:42+05:30
+[INFO] ------------------------------------------------------------------------

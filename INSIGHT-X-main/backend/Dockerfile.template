@@ -1,0 +1,34 @@
+# Base Image
+FROM eclipse-temurin:21-jdk-alpine AS build
+WORKDIR /workspace/app
+
+# Copy Maven wrapper and pom
+COPY mvnw .
+COPY .mvn .mvn
+COPY pom.xml .
+COPY insightx-api-gateway/pom.xml insightx-api-gateway/
+COPY insightx-trust-engine/pom.xml insightx-trust-engine/
+COPY insightx-provenance/pom.xml insightx-provenance/
+# ... copy other module poms ...
+
+# Download dependencies (to cache them)
+# RUN ./mvnw dependency:go-offline -B # (Optional optimization)
+
+# Copy source
+COPY src src
+COPY insightx-api-gateway/src insightx-api-gateway/src
+COPY insightx-trust-engine/src insightx-trust-engine/src
+COPY insightx-provenance/src insightx-provenance/src
+# ... copy other module sources ...
+
+# Build
+RUN ./mvnw install -DskipTests
+RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
+
+# Run Stage
+FROM eclipse-temurin:21-jre-alpine
+VOLUME /tmp
+ARG DEPENDENCY=/workspace/app/target/dependency
+# Copy built artifact - example for API Gateway
+COPY --from=build /workspace/app/insightx-api-gateway/target/*.jar app.jar
+ENTRYPOINT ["java", "-Dspring.profiles.active=docker", "-jar","app.jar"]

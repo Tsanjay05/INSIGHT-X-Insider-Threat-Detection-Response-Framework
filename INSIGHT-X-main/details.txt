@@ -1,0 +1,2112 @@
+﻿Filename: ARCHITECTURE.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\ARCHITECTURE.md
+Purpose: Project documentation file
+
+Filename: design.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\design.json
+Purpose: JSON configuration or data file
+
+Filename: designdoc.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\designdoc.md
+Purpose: Project documentation file
+
+Filename: details.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\details.txt
+Purpose: Project file
+
+Filename: docker-compose.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\docker-compose.yml
+Purpose: Orchestration definition for multi-container Docker environment
+
+Filename: docker-compose.yml.backup
+Path: C:\Users\sarav\Projects\INSIGHT-X\docker-compose.yml.backup
+Purpose: Orchestration definition for multi-container Docker environment
+
+Filename: generate_details.ps1
+Path: C:\Users\sarav\Projects\INSIGHT-X\generate_details.ps1
+Purpose: PowerShell script for automation
+
+Filename: graph-debug.jar
+Path: C:\Users\sarav\Projects\INSIGHT-X\graph-debug.jar
+Purpose: Project file
+
+Filename: prd.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\prd.md
+Purpose: Project documentation file
+
+Filename: project_structure.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\project_structure.txt
+Purpose: Project file
+
+Filename: README.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\README.md
+Purpose: Project documentation file
+
+Filename: techStack.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\techStack.md
+Purpose: Project documentation file
+
+Filename: teckStack.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\teckStack.md
+Purpose: Project documentation file
+
+Filename: TODO.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\TODO.md
+Purpose: Project documentation file
+
+Filename: trust-debug.jar
+Path: C:\Users\sarav\Projects\INSIGHT-X\trust-debug.jar
+Purpose: Project file
+
+Filename: verify-complete-health.sh
+Path: C:\Users\sarav\Projects\INSIGHT-X\verify-complete-health.sh
+Purpose: Shell script for automation or deployment
+
+Filename: Dockerfile.template
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\Dockerfile.template
+Purpose: Project file
+
+Filename: pom.xml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\pom.xml
+Purpose: Maven build configuration and dependency definitions
+
+Filename: run-all.ps1
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\run-all.ps1
+Purpose: PowerShell script for automation
+
+Filename: test-with-docker-fix.log
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\test-with-docker-fix.log
+Purpose: Project file
+
+Filename: test_output.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\test_output.txt
+Purpose: Project file
+
+Filename: test_output_2.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\test_output_2.txt
+Purpose: Project file
+
+Filename: TEST_RESULTS.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\TEST_RESULTS.md
+Purpose: Project documentation file
+
+Filename: trust-test-failure.log
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\trust-test-failure.log
+Purpose: Project file
+
+Filename: trust-test-fixed.log
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\trust-test-fixed.log
+Purpose: Project file
+
+Filename: BusinessException.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\common\src\main\java\com\insightx\exception\BusinessException.java
+Purpose: Custom exception definition for error handling
+
+Filename: GlobalExceptionHandler.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\common\src\main\java\com\insightx\exception\GlobalExceptionHandler.java
+Purpose: Custom exception definition for error handling
+
+Filename: InsightXException.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\common\src\main\java\com\insightx\exception\InsightXException.java
+Purpose: Custom exception definition for error handling
+
+Filename: ResourceNotFoundException.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\common\src\main\java\com\insightx\exception\ResourceNotFoundException.java
+Purpose: Custom exception definition for error handling
+
+Filename: ValidationException.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\common\src\main\java\com\insightx\exception\ValidationException.java
+Purpose: Custom exception definition for error handling
+
+Filename: KafkaHealthIndicator.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\common\src\main\java\com\insightx\health\KafkaHealthIndicator.java
+Purpose: Java source code component
+
+Filename: PostgresHealthIndicator.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\common\src\main\java\com\insightx\health\PostgresHealthIndicator.java
+Purpose: Java source code component
+
+Filename: InsightXMetricsCollector.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\common\src\main\java\com\insightx\metrics\InsightXMetricsCollector.java
+Purpose: Java source code component
+
+Filename: Dockerfile
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\Dockerfile
+Purpose: Container image build instructions
+
+Filename: FIX_PACKAGE_ERROR.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\FIX_PACKAGE_ERROR.md
+Purpose: Project documentation file
+
+Filename: pom.xml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\pom.xml
+Purpose: Maven build configuration and dependency definitions
+
+Filename: test_output.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\test_output.txt
+Purpose: Project file
+
+Filename: GatewayApplication.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\main\java\com\insightx\gateway\GatewayApplication.java
+Purpose: Spring Boot application entry point
+
+Filename: NormalizedSignal.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\main\java\com\insightx\gateway\api\NormalizedSignal.java
+Purpose: Java source code component
+
+Filename: TrustEvaluationRequest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\main\java\com\insightx\gateway\api\TrustEvaluationRequest.java
+Purpose: Data Transfer Object for API communication
+
+Filename: TrustEvaluationResponse.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\main\java\com\insightx\gateway\api\TrustEvaluationResponse.java
+Purpose: Data Transfer Object for API communication
+
+Filename: TrustEngineClient.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\main\java\com\insightx\gateway\client\TrustEngineClient.java
+Purpose: Java source code component
+
+Filename: GatewayRoutesConfig.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\main\java\com\insightx\gateway\config\GatewayRoutesConfig.java
+Purpose: Spring framework configuration class
+
+Filename: GlobalExceptionHandler.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\main\java\com\insightx\gateway\config\GlobalExceptionHandler.java
+Purpose: Custom exception definition for error handling
+
+Filename: WebClientConfig.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\main\java\com\insightx\gateway\config\WebClientConfig.java
+Purpose: Spring framework configuration class
+
+Filename: TrustGatewayController.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\main\java\com\insightx\gateway\controller\TrustGatewayController.java
+Purpose: REST API endpoint handler
+
+Filename: GatewayRequestLogger.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\main\java\com\insightx\gateway\observability\GatewayRequestLogger.java
+Purpose: Data Transfer Object for API communication
+
+Filename: application-docker.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\main\resources\application-docker.yml
+Purpose: Docker-specific Spring Boot configuration overrides
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\main\resources\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: GatewayApplicationTests.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\test\java\com\insightx\gateway\GatewayApplicationTests.java
+Purpose: Unit or integration test class
+
+Filename: TrustEvaluationRequestTest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\test\java\com\insightx\gateway\api\TrustEvaluationRequestTest.java
+Purpose: Unit or integration test class
+
+Filename: TrustGatewayControllerTest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-api-gateway\src\test\java\com\insightx\gateway\controller\TrustGatewayControllerTest.java
+Purpose: Unit or integration test class
+
+Filename: pom.xml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\pom.xml
+Purpose: Maven build configuration and dependency definitions
+
+Filename: AdaptiveControl.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\controls\domain\AdaptiveControl.java
+Purpose: Domain data model or database entity definition
+
+Filename: DecisionProvenance.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\provenance\domain\DecisionProvenance.java
+Purpose: Domain data model or database entity definition
+
+Filename: PolicyReference.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\trust\domain\PolicyReference.java
+Purpose: Domain data model or database entity definition
+
+Filename: ProvenanceRecord.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\trust\domain\ProvenanceRecord.java
+Purpose: Domain data model or database entity definition
+
+Filename: RawEvent.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\trust\domain\RawEvent.java
+Purpose: Domain data model or database entity definition
+
+Filename: RiskIndicator.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\trust\domain\RiskIndicator.java
+Purpose: Domain data model or database entity definition
+
+Filename: RiskLevel.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\trust\domain\RiskLevel.java
+Purpose: Domain data model or database entity definition
+
+Filename: RollingHistorySummary.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\trust\domain\RollingHistorySummary.java
+Purpose: Domain data model or database entity definition
+
+Filename: TrustDecision.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\trust\domain\TrustDecision.java
+Purpose: Domain data model or database entity definition
+
+Filename: TrustDelta.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\trust\domain\TrustDelta.java
+Purpose: Domain data model or database entity definition
+
+Filename: TrustEvent.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\trust\domain\TrustEvent.java
+Purpose: Domain data model or database entity definition
+
+Filename: TrustInvariants.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\trust\domain\TrustInvariants.java
+Purpose: Domain data model or database entity definition
+
+Filename: TrustScore.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\trust\domain\TrustScore.java
+Purpose: Domain data model or database entity definition
+
+Filename: TrustSource.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\trust\domain\TrustSource.java
+Purpose: Domain data model or database entity definition
+
+Filename: TrustState.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-common\src\main\java\com\insightx\trust\domain\TrustState.java
+Purpose: Domain data model or database entity definition
+
+Filename: Dockerfile
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\Dockerfile
+Purpose: Container image build instructions
+
+Filename: pom.xml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\pom.xml
+Purpose: Maven build configuration and dependency definitions
+
+Filename: ControlsApplication.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\ControlsApplication.java
+Purpose: Spring Boot application entry point
+
+Filename: KafkaConfig.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\config\KafkaConfig.java
+Purpose: Spring framework configuration class
+
+Filename: SoarIntegration.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\connector\soar\SoarIntegration.java
+Purpose: Java source code component
+
+Filename: StubSoarAdapter.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\connector\soar\StubSoarAdapter.java
+Purpose: Java source code component
+
+Filename: ApprovalController.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\controller\ApprovalController.java
+Purpose: REST API endpoint handler
+
+Filename: ExplainabilityController.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\controller\ExplainabilityController.java
+Purpose: REST API endpoint handler
+
+Filename: ApprovalRequest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\domain\ApprovalRequest.java
+Purpose: Domain data model or database entity definition
+
+Filename: SimulationResult.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\domain\SimulationResult.java
+Purpose: Domain data model or database entity definition
+
+Filename: AdaptiveControlRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\repository\AdaptiveControlRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: ApprovalRequestRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\repository\ApprovalRequestRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: SimulationResultRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\repository\SimulationResultRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: ApprovalService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\service\ApprovalService.java
+Purpose: Business logic implementation
+
+Filename: ControlService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\service\ControlService.java
+Purpose: Business logic implementation
+
+Filename: MockSoarDispatcher.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\service\MockSoarDispatcher.java
+Purpose: Java source code component
+
+Filename: ResponseOrchestrator.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\service\ResponseOrchestrator.java
+Purpose: Data Transfer Object for API communication
+
+Filename: SimulationService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\service\SimulationService.java
+Purpose: Business logic implementation
+
+Filename: SoarDispatcher.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\java\com\insightx\controls\service\SoarDispatcher.java
+Purpose: Java source code component
+
+Filename: application-docker.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\resources\application-docker.yml
+Purpose: Docker-specific Spring Boot configuration overrides
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\resources\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: V1__controls_init.sql
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\main\resources\db\migration\V1__controls_init.sql
+Purpose: Flyway database migration script
+
+Filename: ControlsApplicationTests.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\test\java\com\insightx\controls\ControlsApplicationTests.java
+Purpose: Unit or integration test class
+
+Filename: ControlServiceTest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\test\java\com\insightx\controls\service\ControlServiceTest.java
+Purpose: Unit or integration test class
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-controls\src\test\resources\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: deps.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\deps.txt
+Purpose: Project file
+
+Filename: Dockerfile
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\Dockerfile
+Purpose: Container image build instructions
+
+Filename: pom.xml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\pom.xml
+Purpose: Maven build configuration and dependency definitions
+
+Filename: GraphApplication.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\src\main\java\com\insightx\graph\GraphApplication.java
+Purpose: Spring Boot application entry point
+
+Filename: GraphController.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\src\main\java\com\insightx\graph\controller\GraphController.java
+Purpose: REST API endpoint handler
+
+Filename: CampaignNode.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\src\main\java\com\insightx\graph\domain\CampaignNode.java
+Purpose: Domain data model or database entity definition
+
+Filename: InteractionEdge.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\src\main\java\com\insightx\graph\domain\InteractionEdge.java
+Purpose: Domain data model or database entity definition
+
+Filename: KillChainStageNode.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\src\main\java\com\insightx\graph\domain\KillChainStageNode.java
+Purpose: Domain data model or database entity definition
+
+Filename: ResourceNode.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\src\main\java\com\insightx\graph\domain\ResourceNode.java
+Purpose: Domain data model or database entity definition
+
+Filename: UserNode.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\src\main\java\com\insightx\graph\domain\UserNode.java
+Purpose: Domain data model or database entity definition
+
+Filename: UserNodeRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\src\main\java\com\insightx\graph\repository\UserNodeRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: CampaignService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\src\main\java\com\insightx\graph\service\CampaignService.java
+Purpose: Business logic implementation
+
+Filename: GraphService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\src\main\java\com\insightx\graph\service\GraphService.java
+Purpose: Business logic implementation
+
+Filename: application-docker.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\src\main\resources\application-docker.yml
+Purpose: Docker-specific Spring Boot configuration overrides
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\src\main\resources\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: GraphApplicationTests.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-graph\src\test\java\com\insightx\graph\GraphApplicationTests.java
+Purpose: Unit or integration test class
+
+Filename: Dockerfile
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\Dockerfile
+Purpose: Container image build instructions
+
+Filename: pom.xml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\pom.xml
+Purpose: Maven build configuration and dependency definitions
+
+Filename: BaseConnector.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\connectors\common\BaseConnector.java
+Purpose: Java source code component
+
+Filename: ConnectorConfig.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\connectors\common\ConnectorConfig.java
+Purpose: Spring framework configuration class
+
+Filename: ConnectorMetadata.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\connectors\common\ConnectorMetadata.java
+Purpose: Java source code component
+
+Filename: HealthCheck.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\connectors\common\HealthCheck.java
+Purpose: Java source code component
+
+Filename: OktaConnector.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\connectors\iam\OktaConnector.java
+Purpose: Java source code component
+
+Filename: IamEvent.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\domain\IamEvent.java
+Purpose: Domain data model or database entity definition
+
+Filename: IngestionApplication.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\IngestionApplication.java
+Purpose: Spring Boot application entry point
+
+Filename: IngestionConfig.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\config\IngestionConfig.java
+Purpose: Spring framework configuration class
+
+Filename: DlpAlert.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\connector\dlp\DlpAlert.java
+Purpose: Java source code component
+
+Filename: DlpConnector.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\connector\dlp\DlpConnector.java
+Purpose: Java source code component
+
+Filename: SimulatedDlpConnector.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\connector\dlp\SimulatedDlpConnector.java
+Purpose: Java source code component
+
+Filename: IamConnector.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\connector\iam\IamConnector.java
+Purpose: Java source code component
+
+Filename: IamEvent.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\connector\iam\IamEvent.java
+Purpose: Java source code component
+
+Filename: MockOktaConnector.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\connector\iam\MockOktaConnector.java
+Purpose: Java source code component
+
+Filename: IngestionController.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\controller\IngestionController.java
+Purpose: REST API endpoint handler
+
+Filename: NormalizedSignal.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\domain\NormalizedSignal.java
+Purpose: Domain data model or database entity definition
+
+Filename: RawEvent.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\domain\RawEvent.java
+Purpose: Domain data model or database entity definition
+
+Filename: ProcessedEvent.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\repository\ProcessedEvent.java
+Purpose: Java source code component
+
+Filename: ProcessedEventRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\repository\ProcessedEventRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: EnrichmentService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\service\EnrichmentService.java
+Purpose: Business logic implementation
+
+Filename: IngestionOrchestrator.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\service\IngestionOrchestrator.java
+Purpose: Java source code component
+
+Filename: NormalizationService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\java\com\insightx\ingestion\service\NormalizationService.java
+Purpose: Business logic implementation
+
+Filename: application-docker.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\resources\application-docker.yml
+Purpose: Docker-specific Spring Boot configuration overrides
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\resources\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: V1__ingestion_init.sql
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\main\resources\db\migration\V1__ingestion_init.sql
+Purpose: Flyway database migration script
+
+Filename: IngestionApplicationTests.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\test\java\com\insightx\ingestion\IngestionApplicationTests.java
+Purpose: Unit or integration test class
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-ingestion\src\test\resources\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: Dockerfile
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\Dockerfile
+Purpose: Container image build instructions
+
+Filename: pom.xml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\pom.xml
+Purpose: Maven build configuration and dependency definitions
+
+Filename: IntentApplication.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\main\java\com\insightx\intent\IntentApplication.java
+Purpose: Spring Boot application entry point
+
+Filename: IntentConfig.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\main\java\com\insightx\intent\config\IntentConfig.java
+Purpose: Spring framework configuration class
+
+Filename: IntentController.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\main\java\com\insightx\intent\controller\IntentController.java
+Purpose: REST API endpoint handler
+
+Filename: IntentHypothesis.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\main\java\com\insightx\intent\domain\IntentHypothesis.java
+Purpose: Domain data model or database entity definition
+
+Filename: IntentHypothesisRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\main\java\com\insightx\intent\repository\IntentHypothesisRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: HypothesisService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\main\java\com\insightx\intent\service\HypothesisService.java
+Purpose: Business logic implementation
+
+Filename: KafkaHypothesisListener.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\main\java\com\insightx\intent\service\KafkaHypothesisListener.java
+Purpose: Java source code component
+
+Filename: application-docker.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\main\resources\application-docker.yml
+Purpose: Docker-specific Spring Boot configuration overrides
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\main\resources\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: V1__intent_init.sql
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\main\resources\db\migration\V1__intent_init.sql
+Purpose: Flyway database migration script
+
+Filename: V2__intent_add_indexes.sql
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\main\resources\db\migration\V2__intent_add_indexes.sql
+Purpose: Flyway database migration script
+
+Filename: IntentApplicationTests.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\test\java\com\insightx\intent\IntentApplicationTests.java
+Purpose: Unit or integration test class
+
+Filename: HypothesisServiceTest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\test\java\com\insightx\intent\service\HypothesisServiceTest.java
+Purpose: Unit or integration test class
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-intent\src\test\resources\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: Dockerfile
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\Dockerfile
+Purpose: Container image build instructions
+
+Filename: pom.xml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\pom.xml
+Purpose: Maven build configuration and dependency definitions
+
+Filename: ProvenanceApplication.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\java\com\insightx\provenance\ProvenanceApplication.java
+Purpose: Spring Boot application entry point
+
+Filename: KafkaConfig.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\java\com\insightx\provenance\config\KafkaConfig.java
+Purpose: Spring framework configuration class
+
+Filename: AuditController.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\java\com\insightx\provenance\controller\AuditController.java
+Purpose: REST API endpoint handler
+
+Filename: ProvenanceController.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\java\com\insightx\provenance\controller\ProvenanceController.java
+Purpose: REST API endpoint handler
+
+Filename: AuditLog.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\java\com\insightx\provenance\domain\AuditLog.java
+Purpose: Domain data model or database entity definition
+
+Filename: TrustDecisionListener.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\java\com\insightx\provenance\listener\TrustDecisionListener.java
+Purpose: Java source code component
+
+Filename: AuditRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\java\com\insightx\provenance\repository\AuditRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: ProvenanceRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\java\com\insightx\provenance\repository\ProvenanceRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: AuditService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\java\com\insightx\provenance\service\AuditService.java
+Purpose: Business logic implementation
+
+Filename: ExplanationService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\java\com\insightx\provenance\service\ExplanationService.java
+Purpose: Business logic implementation
+
+Filename: ForensicReconstructionService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\java\com\insightx\provenance\service\ForensicReconstructionService.java
+Purpose: Business logic implementation
+
+Filename: ProvenanceCaptureService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\java\com\insightx\provenance\service\ProvenanceCaptureService.java
+Purpose: Business logic implementation
+
+Filename: application-docker.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\resources\application-docker.yml
+Purpose: Docker-specific Spring Boot configuration overrides
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\resources\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: V1__provenance_init.sql
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\resources\db\migration\V1__provenance_init.sql
+Purpose: Flyway database migration script
+
+Filename: V2__audit_logs.sql
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\main\resources\db\migration\V2__audit_logs.sql
+Purpose: Flyway database migration script
+
+Filename: ProvenanceApplicationTests.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\test\java\com\insightx\provenance\ProvenanceApplicationTests.java
+Purpose: Unit or integration test class
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-provenance\src\test\resources\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: Dockerfile
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-stream-gateway\Dockerfile
+Purpose: Container image build instructions
+
+Filename: pom.xml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-stream-gateway\pom.xml
+Purpose: Maven build configuration and dependency definitions
+
+Filename: StreamGatewayApplication.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-stream-gateway\src\main\java\com\insightx\stream\StreamGatewayApplication.java
+Purpose: Spring Boot application entry point
+
+Filename: StreamController.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-stream-gateway\src\main\java\com\insightx\stream\controller\StreamController.java
+Purpose: REST API endpoint handler
+
+Filename: StreamService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-stream-gateway\src\main\java\com\insightx\stream\service\StreamService.java
+Purpose: Business logic implementation
+
+Filename: application-docker.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-stream-gateway\src\main\resources\application-docker.yml
+Purpose: Docker-specific Spring Boot configuration overrides
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-stream-gateway\src\main\resources\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: StreamingVerificationTest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-stream-gateway\src\test\java\com\insightx\stream\integration\StreamingVerificationTest.java
+Purpose: Unit or integration test class
+
+Filename: Dockerfile
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\Dockerfile
+Purpose: Container image build instructions
+
+Filename: error.log
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\error.log
+Purpose: Project file
+
+Filename: pom.xml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\pom.xml
+Purpose: Maven build configuration and dependency definitions
+
+Filename: TESTCONTAINERS_ARCHITECTURE.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\TESTCONTAINERS_ARCHITECTURE.md
+Purpose: Project documentation file
+
+Filename: test_output.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\test_output.txt
+Purpose: Project file
+
+Filename: trust-test.log
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\trust-test.log
+Purpose: Project file
+
+Filename: unit-test.log
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\unit-test.log
+Purpose: Project file
+
+Filename: TrustEngineApplication.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\TrustEngineApplication.java
+Purpose: Spring Boot application entry point
+
+Filename: TrustEngineConfiguration.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\TrustEngineConfiguration.java
+Purpose: Spring framework configuration class
+
+Filename: TemporalDecayCalculator.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\algorithm\TemporalDecayCalculator.java
+Purpose: Java source code component
+
+Filename: TemporalDecayResult.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\algorithm\TemporalDecayResult.java
+Purpose: Java source code component
+
+Filename: TrustComputationResult.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\algorithm\TrustComputationResult.java
+Purpose: Java source code component
+
+Filename: TrustScoringEngine.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\algorithm\TrustScoringEngine.java
+Purpose: Java source code component
+
+Filename: EvaluateTrustRequest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\api\EvaluateTrustRequest.java
+Purpose: Data Transfer Object for API communication
+
+Filename: EvaluateTrustResponse.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\api\EvaluateTrustResponse.java
+Purpose: Data Transfer Object for API communication
+
+Filename: NormalizedSignal.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\api\NormalizedSignal.java
+Purpose: Java source code component
+
+Filename: KafkaConfig.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\config\KafkaConfig.java
+Purpose: Spring framework configuration class
+
+Filename: TrustController.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\controller\TrustController.java
+Purpose: REST API endpoint handler
+
+Filename: GraphEdge.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\graph\GraphEdge.java
+Purpose: Java source code component
+
+Filename: GraphNode.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\graph\GraphNode.java
+Purpose: Java source code component
+
+Filename: TemporalGraphService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\graph\TemporalGraphService.java
+Purpose: Business logic implementation
+
+Filename: HypothesisType.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\hypothesis\HypothesisType.java
+Purpose: Java source code component
+
+Filename: IntentHypothesis.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\hypothesis\IntentHypothesis.java
+Purpose: Java source code component
+
+Filename: IntentHypothesisService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\hypothesis\IntentHypothesisService.java
+Purpose: Business logic implementation
+
+Filename: EventNormalizationService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\ingestion\EventNormalizationService.java
+Purpose: Business logic implementation
+
+Filename: TrustEventConsumer.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\ingestion\TrustEventConsumer.java
+Purpose: Java source code component
+
+Filename: PostgresProvenanceRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\persistence\PostgresProvenanceRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: PostgresTrustDecisionRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\persistence\PostgresTrustDecisionRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: PostgresTrustStateRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\persistence\PostgresTrustStateRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: ProvenanceRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\persistence\ProvenanceRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: TrustDecisionRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\persistence\TrustDecisionRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: TrustStateRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\persistence\TrustStateRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: OpaClient.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\policy\OpaClient.java
+Purpose: Java source code component
+
+Filename: OpaPolicyEvaluator.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\policy\OpaPolicyEvaluator.java
+Purpose: Java source code component
+
+Filename: PolicyDecision.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\policy\PolicyDecision.java
+Purpose: Java source code component
+
+Filename: PolicyEvaluationRequest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\policy\PolicyEvaluationRequest.java
+Purpose: Data Transfer Object for API communication
+
+Filename: PolicyEvaluator.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\policy\PolicyEvaluator.java
+Purpose: Java source code component
+
+Filename: PolicyFlags.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\policy\PolicyFlags.java
+Purpose: Java source code component
+
+Filename: InMemoryProvenanceRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\repository\InMemoryProvenanceRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: ProvenanceRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\repository\ProvenanceRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: TrustDecisionRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\repository\TrustDecisionRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: TrustStateRepository.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\repository\TrustStateRepository.java
+Purpose: Data access interface for database persistence
+
+Filename: DeterministicIds.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\service\DeterministicIds.java
+Purpose: Java source code component
+
+Filename: PolicyArbitrationService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\service\PolicyArbitrationService.java
+Purpose: Business logic implementation
+
+Filename: SignalTrustImpactEngine.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\service\SignalTrustImpactEngine.java
+Purpose: Java source code component
+
+Filename: TemporalTrustDecayEngine.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\service\TemporalTrustDecayEngine.java
+Purpose: Java source code component
+
+Filename: TrustComputationService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\service\TrustComputationService.java
+Purpose: Business logic implementation
+
+Filename: TrustEvaluationResult.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\service\TrustEvaluationResult.java
+Purpose: Java source code component
+
+Filename: TrustEvaluationService.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\java\com\insightx\trust\service\TrustEvaluationService.java
+Purpose: Business logic implementation
+
+Filename: application-docker.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\resources\application-docker.yml
+Purpose: Docker-specific Spring Boot configuration overrides
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\resources\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: V1__Initial_Schema.sql
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\main\resources\db\migration\V1__Initial_Schema.sql
+Purpose: Flyway database migration script
+
+Filename: TrustEngineApplicationTests.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\test\java\com\insightx\trust\TrustEngineApplicationTests.java
+Purpose: Unit or integration test class
+
+Filename: TrustApiContractTest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\test\java\com\insightx\trust\api\TrustApiContractTest.java
+Purpose: Unit or integration test class
+
+Filename: PostgreSQLTestBase.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\test\java\com\insightx\trust\integration\PostgreSQLTestBase.java
+Purpose: Unit or integration test class
+
+Filename: TrustDecisionFlowIntegrationTest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\test\java\com\insightx\trust\integration\TrustDecisionFlowIntegrationTest.java
+Purpose: Unit or integration test class
+
+Filename: PolicyArbitrationServiceTest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\test\java\com\insightx\trust\service\PolicyArbitrationServiceTest.java
+Purpose: Unit or integration test class
+
+Filename: SignalTrustImpactEngineTest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\test\java\com\insightx\trust\service\SignalTrustImpactEngineTest.java
+Purpose: Unit or integration test class
+
+Filename: TemporalTrustDecayEngineTest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\test\java\com\insightx\trust\service\TemporalTrustDecayEngineTest.java
+Purpose: Unit or integration test class
+
+Filename: TrustEvaluationServiceTest.java
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\test\java\com\insightx\trust\service\TrustEvaluationServiceTest.java
+Purpose: Unit or integration test class
+
+Filename: application-test.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\test\resources\application-test.yml
+Purpose: Project file
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\test\resources\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: testcontainers.properties
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\insightx-trust-engine\src\test\resources\testcontainers.properties
+Purpose: Project file
+
+Filename: resilience4j-config.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\backend\resilience\resilience4j-config.yml
+Purpose: Project file
+
+Filename: application-docker.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\BOOT-INF\classes\application-docker.yml
+Purpose: Docker-specific Spring Boot configuration overrides
+
+Filename: application.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\BOOT-INF\classes\application.yml
+Purpose: Spring Boot application configuration properties
+
+Filename: README.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\connectors\dlp-connector\README.md
+Purpose: Project documentation file
+
+Filename: README.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\connectors\iam-connector\README.md
+Purpose: Project documentation file
+
+Filename: README.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\connectors\soar-connector\README.md
+Purpose: Project documentation file
+
+Filename: case-timeline-mapping.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\elasticsearch\case-timeline-mapping.json
+Purpose: JSON configuration or data file
+
+Filename: decision-provenance-mapping.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\elasticsearch\decision-provenance-mapping.json
+Purpose: JSON configuration or data file
+
+Filename: apoc-procedures.cypher
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\neo4j\apoc-procedures.cypher
+Purpose: Project file
+
+Filename: init_schema.cypher
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\neo4j\init_schema.cypher
+Purpose: Project file
+
+Filename: schema.cypher
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\neo4j\schema.cypher
+Purpose: Project file
+
+Filename: backup.sh
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\neo4j\backup\backup.sh
+Purpose: Shell script for automation or deployment
+
+Filename: neo4j.conf
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\neo4j\config\neo4j.conf
+Purpose: Project file
+
+Filename: V006__add_partitioning.sql
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\postgres\V006__add_partitioning.sql
+Purpose: Database initialization SQL script
+
+Filename: V007__add_audit_triggers.sql
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\postgres\V007__add_audit_triggers.sql
+Purpose: Database initialization SQL script
+
+Filename: V008__add_indexes_optimization.sql
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\postgres\V008__add_indexes_optimization.sql
+Purpose: Database initialization SQL script
+
+Filename: V009__add_replication_setup.sql
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\postgres\V009__add_replication_setup.sql
+Purpose: Database initialization SQL script
+
+Filename: V1__init_schema.sql
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\postgres\V1__init_schema.sql
+Purpose: Database initialization SQL script
+
+Filename: backup.sh
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\postgres\backup\backup.sh
+Purpose: Shell script for automation or deployment
+
+Filename: point-in-time-recovery.sh
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\postgres\backup\point-in-time-recovery.sh
+Purpose: Shell script for automation or deployment
+
+Filename: restore.sh
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\postgres\backup\restore.sh
+Purpose: Shell script for automation or deployment
+
+Filename: pg_hba.conf
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\postgres\config\pg_hba.conf
+Purpose: Project file
+
+Filename: postgresql.conf
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\postgres\config\postgresql.conf
+Purpose: Project file
+
+Filename: replication-primary.conf
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\postgres\config\replication-primary.conf
+Purpose: Project file
+
+Filename: replication-replica.conf
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\postgres\config\replication-replica.conf
+Purpose: Project file
+
+Filename: pgbouncer.ini
+Path: C:\Users\sarav\Projects\INSIGHT-X\database\postgres\pooling\pgbouncer.ini
+Purpose: Project file
+
+Filename: init-databases.sql
+Path: C:\Users\sarav\Projects\INSIGHT-X\docker\scripts\init-databases.sql
+Purpose: Database initialization SQL script
+
+Filename: startup-tiered.sh
+Path: C:\Users\sarav\Projects\INSIGHT-X\docker\scripts\startup-tiered.sh
+Purpose: Shell script for automation or deployment
+
+Filename: verify-connections.sh
+Path: C:\Users\sarav\Projects\INSIGHT-X\docker\scripts\verify-connections.sh
+Purpose: Shell script for automation or deployment
+
+Filename: API_DOCUMENTATION.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\docs\API_DOCUMENTATION.md
+Purpose: Project documentation file
+
+Filename: deployment-runbook.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\docs\deployment-runbook.md
+Purpose: Project documentation file
+
+Filename: openapi.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\docs\api\openapi.yaml
+Purpose: Project file
+
+Filename: component-diagram.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\docs\architecture\component-diagram.md
+Purpose: Project documentation file
+
+Filename: FILE_INDEX.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\docs\architecture\FILE_INDEX.md
+Purpose: Project documentation file
+
+Filename: README.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\docs\deployment\README.md
+Purpose: Project documentation file
+
+Filename: elasticsearch.yml
+Path: C:\Users\sarav\Projects\INSIGHT-X\elasticsearch\config\elasticsearch.yml
+Purpose: Project file
+
+Filename: policy-decisions-ilm-policy.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\elasticsearch\ilm\policy-decisions-ilm-policy.json
+Purpose: JSON configuration or data file
+
+Filename: provenance-ilm-policy.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\elasticsearch\ilm\provenance-ilm-policy.json
+Purpose: JSON configuration or data file
+
+Filename: risk-indicators-ilm-policy.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\elasticsearch\ilm\risk-indicators-ilm-policy.json
+Purpose: JSON configuration or data file
+
+Filename: init-elasticsearch.sh
+Path: C:\Users\sarav\Projects\INSIGHT-X\elasticsearch\scripts\init-elasticsearch.sh
+Purpose: Shell script for automation or deployment
+
+Filename: repository-config.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\elasticsearch\snapshots\repository-config.json
+Purpose: JSON configuration or data file
+
+Filename: snapshot-policy.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\elasticsearch\snapshots\snapshot-policy.json
+Purpose: JSON configuration or data file
+
+Filename: policy-decisions-template.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\elasticsearch\templates\policy-decisions-template.json
+Purpose: JSON configuration or data file
+
+Filename: provenance-template.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\elasticsearch\templates\provenance-template.json
+Purpose: JSON configuration or data file
+
+Filename: risk-indicators-template.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\elasticsearch\templates\risk-indicators-template.json
+Purpose: JSON configuration or data file
+
+Filename: .env.development
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\.env.development
+Purpose: Project file
+
+Filename: .env.example
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\.env.example
+Purpose: Project file
+
+Filename: .env.local
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\.env.local
+Purpose: Project file
+
+Filename: .eslintrc.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\.eslintrc.json
+Purpose: JSON configuration or data file
+
+Filename: .prettierrc
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\.prettierrc
+Purpose: Project file
+
+Filename: build_error.log
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\build_error.log
+Purpose: Project file
+
+Filename: build_log.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\build_log.txt
+Purpose: Project file
+
+Filename: build_output.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\build_output.txt
+Purpose: Project file
+
+Filename: error.log
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\error.log
+Purpose: Project file
+
+Filename: index.html
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\index.html
+Purpose: Project file
+
+Filename: package-lock.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\package-lock.json
+Purpose: JSON configuration or data file
+
+Filename: package.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\package.json
+Purpose: JSON configuration or data file
+
+Filename: postcss.config.js
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\postcss.config.js
+Purpose: Project file
+
+Filename: README.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\README.md
+Purpose: Project documentation file
+
+Filename: tailwind.config.js
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\tailwind.config.js
+Purpose: Project file
+
+Filename: test-debug-2.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\test-debug-2.txt
+Purpose: Project file
+
+Filename: test-debug-3.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\test-debug-3.txt
+Purpose: Project file
+
+Filename: test-debug-4.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\test-debug-4.txt
+Purpose: Project file
+
+Filename: test-output.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\test-output.txt
+Purpose: Project file
+
+Filename: tsconfig.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\tsconfig.json
+Purpose: JSON configuration or data file
+
+Filename: tsconfig.node.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\tsconfig.node.json
+Purpose: JSON configuration or data file
+
+Filename: tsconfig.node.tsbuildinfo
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\tsconfig.node.tsbuildinfo
+Purpose: Project file
+
+Filename: tsc_after_fix.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\tsc_after_fix.txt
+Purpose: Project file
+
+Filename: tsc_clean_build.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\tsc_clean_build.txt
+Purpose: Project file
+
+Filename: tsc_errors.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\tsc_errors.txt
+Purpose: Project file
+
+Filename: typecheck_output.txt
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\typecheck_output.txt
+Purpose: Project file
+
+Filename: vite.config.d.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\vite.config.d.ts
+Purpose: Project file
+
+Filename: vite.config.js
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\vite.config.js
+Purpose: Project file
+
+Filename: vite.config.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\vite.config.ts
+Purpose: Project file
+
+Filename: vitest.config.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\vitest.config.ts
+Purpose: Project file
+
+Filename: ARCHITECTURE.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\docs\ARCHITECTURE.md
+Purpose: Project documentation file
+
+Filename: COMPONENTS.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\docs\COMPONENTS.md
+Purpose: Project documentation file
+
+Filename: CONTRIBUTING.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\docs\CONTRIBUTING.md
+Purpose: Project documentation file
+
+Filename: App.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\App.tsx
+Purpose: Project file
+
+Filename: index.css
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\index.css
+Purpose: Project file
+
+Filename: main.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\main.tsx
+Purpose: Project file
+
+Filename: vite-env.d.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\vite-env.d.ts
+Purpose: Project file
+
+Filename: alerts.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\alerts.ts
+Purpose: Project file
+
+Filename: alerts.types.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\alerts.types.ts
+Purpose: Project file
+
+Filename: audit.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\audit.ts
+Purpose: Project file
+
+Filename: auth.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\auth.ts
+Purpose: Project file
+
+Filename: auth.types.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\auth.types.ts
+Purpose: Project file
+
+Filename: cases.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\cases.ts
+Purpose: Project file
+
+Filename: cases.types.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\cases.types.ts
+Purpose: Project file
+
+Filename: client.test.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\client.test.ts
+Purpose: Project file
+
+Filename: client.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\client.ts
+Purpose: Project file
+
+Filename: controls.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\controls.ts
+Purpose: Project file
+
+Filename: controls.types.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\controls.types.ts
+Purpose: Project file
+
+Filename: graph.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\graph.ts
+Purpose: Project file
+
+Filename: graph.types.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\graph.types.ts
+Purpose: Project file
+
+Filename: intent.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\intent.ts
+Purpose: Project file
+
+Filename: intent.types.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\intent.types.ts
+Purpose: Project file
+
+Filename: interceptors.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\interceptors.ts
+Purpose: Project file
+
+Filename: mockData.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\mockData.ts
+Purpose: Project file
+
+Filename: policies.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\policies.ts
+Purpose: Project file
+
+Filename: policies.types.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\policies.types.ts
+Purpose: Project file
+
+Filename: provenance.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\provenance.ts
+Purpose: Project file
+
+Filename: provenance.types.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\provenance.types.ts
+Purpose: Project file
+
+Filename: reports.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\reports.ts
+Purpose: Project file
+
+Filename: reports.types.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\reports.types.ts
+Purpose: Project file
+
+Filename: tokenStorage.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\tokenStorage.ts
+Purpose: Project file
+
+Filename: trust.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\trust.ts
+Purpose: Project file
+
+Filename: trust.types.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\trust.types.ts
+Purpose: Project file
+
+Filename: users.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\users.ts
+Purpose: Project file
+
+Filename: users.types.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\api\users.types.ts
+Purpose: Project file
+
+Filename: Header.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\Header.tsx
+Purpose: Project file
+
+Filename: Layout.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\Layout.tsx
+Purpose: Project file
+
+Filename: Sidebar.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\Sidebar.tsx
+Purpose: Project file
+
+Filename: PermissionGuard.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\auth\PermissionGuard.tsx
+Purpose: Project file
+
+Filename: ProtectedRoute.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\auth\ProtectedRoute.tsx
+Purpose: Project file
+
+Filename: RoleGuard.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\auth\RoleGuard.tsx
+Purpose: Project file
+
+Filename: TrustTrendChart.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\charts\TrustTrendChart.tsx
+Purpose: Project file
+
+Filename: ActivityTimeline.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\detail\ActivityTimeline.tsx
+Purpose: Project file
+
+Filename: CommentSection.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\detail\CommentSection.tsx
+Purpose: Project file
+
+Filename: DetailHeader.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\detail\DetailHeader.tsx
+Purpose: Project file
+
+Filename: DetailInfoGrid.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\detail\DetailInfoGrid.tsx
+Purpose: Project file
+
+Filename: TopRiskIndicators.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\indicators\TopRiskIndicators.tsx
+Purpose: Project file
+
+Filename: AppLayout.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\layout\AppLayout.tsx
+Purpose: Project file
+
+Filename: Sidebar.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\layout\Sidebar.tsx
+Purpose: Project file
+
+Filename: TopBar.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\layout\TopBar.tsx
+Purpose: Project file
+
+Filename: AdvancedFilter.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\search\AdvancedFilter.tsx
+Purpose: Project file
+
+Filename: CommandPalette.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\search\CommandPalette.tsx
+Purpose: Project file
+
+Filename: LiveFeedPanel.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\streaming\LiveFeedPanel.tsx
+Purpose: Project file
+
+Filename: HighRiskUsersTable.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\tables\HighRiskUsersTable.tsx
+Purpose: Project file
+
+Filename: TimelineEventItem.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\timeline\TimelineEventItem.tsx
+Purpose: Project file
+
+Filename: TrustScoreBadge.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\trust\TrustScoreBadge.tsx
+Purpose: Project file
+
+Filename: Alert.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Alert.tsx
+Purpose: Project file
+
+Filename: Badge.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Badge.tsx
+Purpose: Project file
+
+Filename: Breadcrumbs.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Breadcrumbs.tsx
+Purpose: Project file
+
+Filename: Button.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Button.tsx
+Purpose: Project file
+
+Filename: Card.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Card.tsx
+Purpose: Project file
+
+Filename: DataTable.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\DataTable.tsx
+Purpose: Project file
+
+Filename: Dialog.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Dialog.tsx
+Purpose: Project file
+
+Filename: Drawer.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Drawer.tsx
+Purpose: Project file
+
+Filename: Dropdown.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Dropdown.tsx
+Purpose: Project file
+
+Filename: EmptyState.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\EmptyState.tsx
+Purpose: Project file
+
+Filename: ErrorState.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\ErrorState.tsx
+Purpose: Project file
+
+Filename: Form.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Form.tsx
+Purpose: Project file
+
+Filename: FormInput.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\FormInput.tsx
+Purpose: Project file
+
+Filename: index.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\index.ts
+Purpose: Project file
+
+Filename: Input.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Input.tsx
+Purpose: Project file
+
+Filename: Label.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Label.tsx
+Purpose: Project file
+
+Filename: LoadingState.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\LoadingState.tsx
+Purpose: Project file
+
+Filename: MetricCard.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\MetricCard.tsx
+Purpose: Project file
+
+Filename: Modal.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Modal.tsx
+Purpose: Project file
+
+Filename: Popover.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Popover.tsx
+Purpose: Project file
+
+Filename: Select.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Select.tsx
+Purpose: Project file
+
+Filename: Skeleton.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Skeleton.tsx
+Purpose: Project file
+
+Filename: Spinner.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Spinner.tsx
+Purpose: Project file
+
+Filename: Tabs.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Tabs.tsx
+Purpose: Project file
+
+Filename: Toast.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Toast.tsx
+Purpose: Project file
+
+Filename: Toggle.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Toggle.tsx
+Purpose: Project file
+
+Filename: Tooltip.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\Tooltip.tsx
+Purpose: Project file
+
+Filename: use-toast.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\use-toast.ts
+Purpose: Project file
+
+Filename: AreaChart.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\charts\AreaChart.tsx
+Purpose: Project file
+
+Filename: BarChart.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\charts\BarChart.tsx
+Purpose: Project file
+
+Filename: ChartWrapper.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\charts\ChartWrapper.tsx
+Purpose: Project file
+
+Filename: index.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\charts\index.ts
+Purpose: Project file
+
+Filename: LineChart.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\charts\LineChart.tsx
+Purpose: Project file
+
+Filename: PieChart.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\ui\charts\PieChart.tsx
+Purpose: Project file
+
+Filename: UserAvatar.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\users\UserAvatar.tsx
+Purpose: Project file
+
+Filename: export.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\components\utils\export.tsx
+Purpose: Project file
+
+Filename: api.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\config\api.ts
+Purpose: Project file
+
+Filename: env.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\config\env.ts
+Purpose: Project file
+
+Filename: features.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\config\features.ts
+Purpose: Project file
+
+Filename: routes.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\config\routes.ts
+Purpose: Project file
+
+Filename: theme.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\config\theme.ts
+Purpose: Project file
+
+Filename: WebSocketProvider.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\contexts\WebSocketProvider.tsx
+Purpose: Project file
+
+Filename: useAlertDetail.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\hooks\useAlertDetail.ts
+Purpose: Project file
+
+Filename: useAlerts.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\hooks\useAlerts.ts
+Purpose: Project file
+
+Filename: useAuth.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\hooks\useAuth.ts
+Purpose: Project file
+
+Filename: useCases.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\hooks\useCases.ts
+Purpose: Project file
+
+Filename: usePolicies.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\hooks\usePolicies.ts
+Purpose: Project file
+
+Filename: useReports.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\hooks\useReports.ts
+Purpose: Project file
+
+Filename: useTrustStream.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\hooks\useTrustStream.ts
+Purpose: Project file
+
+Filename: useUser.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\hooks\useUser.ts
+Purpose: Project file
+
+Filename: constants.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\lib\constants.ts
+Purpose: Project file
+
+Filename: permissions.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\lib\permissions.ts
+Purpose: Project file
+
+Filename: utils.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\lib\utils.ts
+Purpose: Project file
+
+Filename: Alerts.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Alerts.tsx
+Purpose: Project file
+
+Filename: Approvals.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Approvals.tsx
+Purpose: Project file
+
+Filename: Campaigns.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Campaigns.tsx
+Purpose: Project file
+
+Filename: Cases.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Cases.tsx
+Purpose: Project file
+
+Filename: Controls.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Controls.tsx
+Purpose: Project file
+
+Filename: Dashboard.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Dashboard.tsx
+Purpose: Project file
+
+Filename: Intent.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Intent.tsx
+Purpose: Project file
+
+Filename: Policies.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Policies.tsx
+Purpose: Project file
+
+Filename: Provenance.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Provenance.tsx
+Purpose: Project file
+
+Filename: Reports.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Reports.tsx
+Purpose: Project file
+
+Filename: Settings.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Settings.tsx
+Purpose: Project file
+
+Filename: ThreatMap.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\ThreatMap.tsx
+Purpose: Project file
+
+Filename: Timeline.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Timeline.tsx
+Purpose: Project file
+
+Filename: Users.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Users.tsx
+Purpose: Project file
+
+Filename: AlertDetail.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\alerts\AlertDetail.tsx
+Purpose: Project file
+
+Filename: ForgotPassword.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\auth\ForgotPassword.tsx
+Purpose: Project file
+
+Filename: Login.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\auth\Login.tsx
+Purpose: Project file
+
+Filename: ResetPassword.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\auth\ResetPassword.tsx
+Purpose: Project file
+
+Filename: Unauthorized.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\auth\Unauthorized.tsx
+Purpose: Project file
+
+Filename: CampaignDetail.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\campaigns\CampaignDetail.tsx
+Purpose: Project file
+
+Filename: CaseDetail.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\cases\CaseDetail.tsx
+Purpose: Project file
+
+Filename: ControlDetail.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\controls\ControlDetail.tsx
+Purpose: Project file
+
+Filename: Dashboard.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\Dashboard\Dashboard.tsx
+Purpose: Project file
+
+Filename: UIKit.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\dev\UIKit.tsx
+Purpose: Project file
+
+Filename: IntentDetail.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\intent\IntentDetail.tsx
+Purpose: Project file
+
+Filename: PolicyDetail.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\policies\PolicyDetail.tsx
+Purpose: Project file
+
+Filename: DecisionDetail.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\provenance\DecisionDetail.tsx
+Purpose: Project file
+
+Filename: ReportDetail.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\reports\ReportDetail.tsx
+Purpose: Project file
+
+Filename: EntityTrustDetail.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\trust\EntityTrustDetail.tsx
+Purpose: Project file
+
+Filename: Profile.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\users\Profile.tsx
+Purpose: Project file
+
+Filename: UserDetail.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\users\UserDetail.tsx
+Purpose: Project file
+
+Filename: UsersList.tsx
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\pages\users\UsersList.tsx
+Purpose: Project file
+
+Filename: authStore.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\store\authStore.ts
+Purpose: Project file
+
+Filename: uiStore.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\store\uiStore.ts
+Purpose: Project file
+
+Filename: useInsightXStore.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\store\useInsightXStore.ts
+Purpose: Project file
+
+Filename: setup.ts
+Path: C:\Users\sarav\Projects\INSIGHT-X\frontend\insightx-ui\src\test\setup.ts
+Purpose: Project file
+
+Filename: Chart.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\Chart.yaml
+Purpose: Project file
+
+Filename: values-dev.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\values-dev.yaml
+Purpose: Project file
+
+Filename: values-production.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\values-production.yaml
+Purpose: Project file
+
+Filename: values-staging.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\values-staging.yaml
+Purpose: Project file
+
+Filename: values.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\values.yaml
+Purpose: Project file
+
+Filename: deployment.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\templates\deployment.yaml
+Purpose: Project file
+
+Filename: hpa-api-gateway.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\templates\hpa-api-gateway.yaml
+Purpose: Project file
+
+Filename: hpa-controls.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\templates\hpa-controls.yaml
+Purpose: Project file
+
+Filename: hpa-graph.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\templates\hpa-graph.yaml
+Purpose: Project file
+
+Filename: hpa-ingestion.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\templates\hpa-ingestion.yaml
+Purpose: Project file
+
+Filename: hpa-intent.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\templates\hpa-intent.yaml
+Purpose: Project file
+
+Filename: hpa-provenance.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\templates\hpa-provenance.yaml
+Purpose: Project file
+
+Filename: hpa-trust-engine.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\templates\hpa-trust-engine.yaml
+Purpose: Project file
+
+Filename: networkpolicy.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\templates\networkpolicy.yaml
+Purpose: Project file
+
+Filename: poddisruptionbudget.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\templates\poddisruptionbudget.yaml
+Purpose: Project file
+
+Filename: service-monitor.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\helm\insightx\templates\service-monitor.yaml
+Purpose: Project file
+
+Filename: realm-export-complete.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\keycloak\realm-export-complete.json
+Purpose: JSON configuration or data file
+
+Filename: realm-export.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\keycloak\realm-export.json
+Purpose: JSON configuration or data file
+
+Filename: conditional-otp-flow.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\keycloak\authentication\conditional-otp-flow.json
+Purpose: JSON configuration or data file
+
+Filename: mfa-flow.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\keycloak\authentication\mfa-flow.json
+Purpose: JSON configuration or data file
+
+Filename: step-up-auth-flow.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\keycloak\authentication\step-up-auth-flow.json
+Purpose: JSON configuration or data file
+
+Filename: azure-ad-config.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\keycloak\identity-providers\azure-ad-config.json
+Purpose: JSON configuration or data file
+
+Filename: google-oidc-config.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\keycloak\identity-providers\google-oidc-config.json
+Purpose: JSON configuration or data file
+
+Filename: okta-saml-config.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\keycloak\identity-providers\okta-saml-config.json
+Purpose: JSON configuration or data file
+
+Filename: resource-permissions.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\keycloak\roles\resource-permissions.json
+Purpose: JSON configuration or data file
+
+Filename: configmap-base.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\kubernetes\configmap-base.yaml
+Purpose: Project file
+
+Filename: namespace.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\kubernetes\namespace.yaml
+Purpose: Project file
+
+Filename: trust-evaluation.json
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\observability\grafana\dashboards\trust-evaluation.json
+Purpose: JSON configuration or data file
+
+Filename: otel-collector-config.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\observability\opentelemetry\otel-collector-config.yaml
+Purpose: Project file
+
+Filename: alerting-rules.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\infrastructure\observability\prometheus\rules\alerting-rules.yaml
+Purpose: Project file
+
+Filename: consumer-groups.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\kafka\consumer-groups.yaml
+Purpose: Project file
+
+Filename: quotas.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\kafka\quotas.yaml
+Purpose: Project file
+
+Filename: topics-complete.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\kafka\topics-complete.yaml
+Purpose: Project file
+
+Filename: topics.yaml
+Path: C:\Users\sarav\Projects\INSIGHT-X\kafka\topics.yaml
+Purpose: Project file
+
+Filename: auth-event-v1.avsc
+Path: C:\Users\sarav\Projects\INSIGHT-X\kafka\schemas\auth-event-v1.avsc
+Purpose: Project file
+
+Filename: authz-event-v1.avsc
+Path: C:\Users\sarav\Projects\INSIGHT-X\kafka\schemas\authz-event-v1.avsc
+Purpose: Project file
+
+Filename: data-access-event-v1.avsc
+Path: C:\Users\sarav\Projects\INSIGHT-X\kafka\schemas\data-access-event-v1.avsc
+Purpose: Project file
+
+Filename: enriched-event-v1.avsc
+Path: C:\Users\sarav\Projects\INSIGHT-X\kafka\schemas\enriched-event-v1.avsc
+Purpose: Project file
+
+Filename: event.avsc
+Path: C:\Users\sarav\Projects\INSIGHT-X\kafka\schemas\event.avsc
+Purpose: Project file
+
+Filename: privileged-ops-event-v1.avsc
+Path: C:\Users\sarav\Projects\INSIGHT-X\kafka\schemas\privileged-ops-event-v1.avsc
+Purpose: Project file
+
+Filename: workflow-event-v1.avsc
+Path: C:\Users\sarav\Projects\INSIGHT-X\kafka\schemas\workflow-event-v1.avsc
+Purpose: Project file
+
+Filename: INSIGHTX_FRONTEND_ANALYSIS.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\Master Prompts\INSIGHTX_FRONTEND_ANALYSIS.md
+Purpose: Project documentation file
+
+Filename: MASTER_EXECUTION_PLAN.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\Master Prompts\MASTER_EXECUTION_PLAN.md
+Purpose: Project documentation file
+
+Filename: PROMPT_BUNDLE_10_API.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\Master Prompts\PROMPT_BUNDLE_10_API.md
+Purpose: Project documentation file
+
+Filename: PROMPT_BUNDLE_1_AUTH.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\Master Prompts\PROMPT_BUNDLE_1_AUTH.md
+Purpose: Project documentation file
+
+Filename: PROMPT_BUNDLE_2_DETAILS.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\Master Prompts\PROMPT_BUNDLE_2_DETAILS.md
+Purpose: Project documentation file
+
+Filename: PROMPT_BUNDLE_3_FORMS.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\Master Prompts\PROMPT_BUNDLE_3_FORMS.md
+Purpose: Project documentation file
+
+Filename: PROMPT_BUNDLE_4_CHARTS.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\Master Prompts\PROMPT_BUNDLE_4_CHARTS.md
+Purpose: Project documentation file
+
+Filename: PROMPT_BUNDLE_5_TABLES.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\Master Prompts\PROMPT_BUNDLE_5_TABLES.md
+Purpose: Project documentation file
+
+Filename: PROMPT_BUNDLE_6_UI_LIBRARY.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\Master Prompts\PROMPT_BUNDLE_6_UI_LIBRARY.md
+Purpose: Project documentation file
+
+Filename: PROMPT_BUNDLE_7_REALTIME.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\Master Prompts\PROMPT_BUNDLE_7_REALTIME.md
+Purpose: Project documentation file
+
+Filename: PROMPT_BUNDLE_8_SEARCH.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\Master Prompts\PROMPT_BUNDLE_8_SEARCH.md
+Purpose: Project documentation file
+
+Filename: PROMPT_BUNDLE_9_CONFIG.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\Master Prompts\PROMPT_BUNDLE_9_CONFIG.md
+Purpose: Project documentation file
+
+Filename: access_control_complete.rego
+Path: C:\Users\sarav\Projects\INSIGHT-X\policies\opa\access_control_complete.rego
+Purpose: Project file
+
+Filename: human_in_loop.rego
+Path: C:\Users\sarav\Projects\INSIGHT-X\policies\opa\human_in_loop.rego
+Purpose: Project file
+
+Filename: risk_thresholds.rego
+Path: C:\Users\sarav\Projects\INSIGHT-X\policies\opa\risk_thresholds.rego
+Purpose: Project file
+
+Filename: risk_thresholds_complete.rego
+Path: C:\Users\sarav\Projects\INSIGHT-X\policies\opa\risk_thresholds_complete.rego
+Purpose: Project file
+
+Filename: step_up_auth_complete.rego
+Path: C:\Users\sarav\Projects\INSIGHT-X\policies\opa\step_up_auth_complete.rego
+Purpose: Project file
+
+Filename: trust_decay.rego
+Path: C:\Users\sarav\Projects\INSIGHT-X\policies\opa\trust_decay.rego
+Purpose: Project file
+
+Filename: trust_decay_complete.rego
+Path: C:\Users\sarav\Projects\INSIGHT-X\policies\opa\trust_decay_complete.rego
+Purpose: Project file
+
+Filename: deploy.sh
+Path: C:\Users\sarav\Projects\INSIGHT-X\scripts\deploy.sh
+Purpose: Shell script for automation or deployment
+
+Filename: README.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\tests\e2e\README.md
+Purpose: Project documentation file
+
+Filename: README.md
+Path: C:\Users\sarav\Projects\INSIGHT-X\tests\integration\README.md
+Purpose: Project documentation file
+

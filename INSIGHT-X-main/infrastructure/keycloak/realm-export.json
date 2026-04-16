@@ -1,0 +1,13 @@
+{
+  "realm": "insightx",
+  "enabled": true,
+  "roles": {
+    "realm": [
+      {"name": "security_analyst"},
+      {"name": "security_engineer"},
+      {"name": "compliance_audit"},
+      {"name": "hr_governed"},
+      {"name": "ciso"}
+    ]
+  }
+}

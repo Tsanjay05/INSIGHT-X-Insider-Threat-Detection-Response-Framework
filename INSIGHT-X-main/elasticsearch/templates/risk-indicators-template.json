@@ -1,0 +1,85 @@
+{
+    "index_patterns": [
+        "insightx-risk-indicators-*"
+    ],
+    "version": 1,
+    "priority": 150,
+    "template": {
+        "settings": {
+            "number_of_shards": 2,
+            "number_of_replicas": 2,
+            "index.lifecycle.name": "insightx-risk-indicators-policy",
+            "index.lifecycle.rollover_alias": "insightx-risk-indicators",
+            "refresh_interval": "5s"
+        },
+        "mappings": {
+            "properties": {
+                "@timestamp": {
+                    "type": "date"
+                },
+                "indicator_id": {
+                    "type": "keyword"
+                },
+                "user_id": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "indicator_type": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "category": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "severity": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "confidence": {
+                    "type": "float"
+                },
+                "value": {
+                    "type": "object",
+                    "dynamic": true
+                },
+                "baseline": {
+                    "type": "object",
+                    "properties": {
+                        "mean": {
+                            "type": "float"
+                        },
+                        "stddev": {
+                            "type": "float"
+                        },
+                        "threshold": {
+                            "type": "float"
+                        }
+                    }
+                },
+                "deviation_score": {
+                    "type": "float"
+                },
+                "contributing_events": {
+                    "type": "keyword"
+                },
+                "source_system": {
+                    "type": "keyword"
+                },
+                "mitigated": {
+                    "type": "boolean"
+                },
+                "mitigation_timestamp": {
+                    "type": "date"
+                },
+                "created_at": {
+                    "type": "date"
+                }
+            }
+        }
+    },
+    "_meta": {
+        "description": "Index template for risk indicators and behavioral anomalies",
+        "version": "1.0.0"
+    }
+}

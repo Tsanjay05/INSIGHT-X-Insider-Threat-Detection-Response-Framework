@@ -1,0 +1,112 @@
+# Elasticsearch Configuration for INSIGHT-X
+# Optimized for log aggregation and search
+
+# ============================================================================
+# CLUSTER SETTINGS
+# ============================================================================
+cluster.name: insightx-elasticsearch
+node.name: ${HOSTNAME}
+
+# Node roles
+node.roles: [ master, data, ingest, ml ]
+
+# ============================================================================
+# NETWORK SETTINGS
+# ============================================================================
+network.host: 0.0.0.0
+http.port: 9200
+transport.port: 9300
+
+# ============================================================================
+# DISCOVERY AND CLUSTER FORMATION
+# ============================================================================
+discovery.seed_hosts:
+  - elasticsearch-master-0
+  - elasticsearch-master-1
+  - elasticsearch-master-2
+
+cluster.initial_master_nodes:
+  - elasticsearch-master-0
+  - elasticsearch-master-1
+  - elasticsearch-master-2
+
+# ============================================================================
+# MEMORY SETTINGS
+# ============================================================================
+# Set in jvm.options:
+# -Xms8g
+# -Xmx8g
+
+# Bootstrap memory lock
+bootstrap.memory_lock: true
+
+# ============================================================================
+# PATH SETTINGS
+# ============================================================================
+path.data: /var/lib/elasticsearch/data
+path.logs: /var/log/elasticsearch
+
+# ============================================================================
+# SECURITY SETTINGS
+# ============================================================================
+xpack.security.enabled: true
+xpack.security.transport.ssl.enabled: true
+xpack.security.transport.ssl.verification_mode: certificate
+xpack.security.transport.ssl.keystore.path: /etc/elasticsearch/certs/elastic-certificates.p12
+xpack.security.transport.ssl.truststore.path: /etc/elasticsearch/certs/elastic-certificates.p12
+
+xpack.security.http.ssl.enabled: true
+xpack.security.http.ssl.keystore.path: /etc/elasticsearch/certs/http.p12
+
+# ============================================================================
+# MONITORING
+# ============================================================================
+xpack.monitoring.enabled: true
+xpack.monitoring.collection.enabled: true
+
+# ============================================================================
+# INDEX SETTINGS
+# ============================================================================
+# Default number of shards and replicas
+index.number_of_shards: 2
+index.number_of_replicas: 1
+
+# Search settings
+indices.query.bool.max_clause_count: 2048
+
+# ============================================================================
+# SEARCH SETTINGS
+# ============================================================================
+search.max_buckets: 100000
+
+# ============================================================================
+# SNAPSHOT SETTINGS
+# ============================================================================
+# S3 repository plugin settings
+s3.client.default.endpoint: s3.us-east-1.amazonaws.com
+s3.client.default.protocol: https
+
+# ============================================================================
+# PERFORMANCE TUNING
+# ============================================================================
+# Thread pools
+thread_pool.write.queue_size: 1000
+thread_pool.search.queue_size: 2000
+
+# Indexing buffer
+indices.memory.index_buffer_size: 20%
+
+# Query cache
+indices.queries.cache.size: 10%
+
+# Field data cache
+indices.fielddata.cache.size: 15%
+
+# Request cache
+indices.requests.cache.size: 2%
+
+# ============================================================================
+# LOGGING
+# ============================================================================
+logger.level: INFO
+logger.org.elasticsearch.discovery: DEBUG

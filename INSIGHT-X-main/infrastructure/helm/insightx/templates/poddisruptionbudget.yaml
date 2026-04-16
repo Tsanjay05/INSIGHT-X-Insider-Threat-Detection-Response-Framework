@@ -1,0 +1,106 @@
+{{- if .Values.security.podDisruptionBudget.enabled }}
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "insightx.fullname" . }}-ingestion-pdb
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: ingestion
+spec:
+  minAvailable: {{ .Values.security.podDisruptionBudget.minAvailable }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: ingestion
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "insightx.fullname" . }}-trust-engine-pdb
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: trust-engine
+spec:
+  minAvailable: {{ .Values.security.podDisruptionBudget.minAvailable }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: trust-engine
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "insightx.fullname" . }}-intent-pdb
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: intent
+spec:
+  minAvailable: {{ .Values.security.podDisruptionBudget.minAvailable }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: intent
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "insightx.fullname" . }}-graph-pdb
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: graph
+spec:
+  minAvailable: {{ .Values.security.podDisruptionBudget.minAvailable }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: graph
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "insightx.fullname" . }}-controls-pdb
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: controls
+spec:
+  minAvailable: {{ .Values.security.podDisruptionBudget.minAvailable }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: controls
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "insightx.fullname" . }}-provenance-pdb
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: provenance
+spec:
+  minAvailable: {{ .Values.security.podDisruptionBudget.minAvailable }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: provenance
+
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "insightx.fullname" . }}-api-gateway-pdb
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: api-gateway
+spec:
+  minAvailable: {{ .Values.security.podDisruptionBudget.minAvailable }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: api-gateway
+{{- end }}

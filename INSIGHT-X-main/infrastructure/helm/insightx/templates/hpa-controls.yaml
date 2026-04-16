@@ -1,0 +1,47 @@
+{{- if and .Values.controls.enabled .Values.controls.autoscaling.enabled }}
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "insightx.fullname" . }}-controls
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: controls
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ include "insightx.fullname" . }}-controls
+  minReplicas: {{ .Values.controls.autoscaling.minReplicas }}
+  maxReplicas: {{ .Values.controls.autoscaling.maxReplicas }}
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: {{ .Values.controls.autoscaling.targetCPUUtilizationPercentage }}
+  {{- if .Values.controls.autoscaling.targetMemoryUtilizationPercentage }}
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: {{ .Values.controls.autoscaling.targetMemoryUtilizationPercentage }}
+  {{- end }}
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 300
+      policies:
+      - type: Percent
+        value: 50
+        periodSeconds: 60
+      selectPolicy: Min
+    scaleUp:
+      stabilizationWindowSeconds: 0
+      policies:
+      - type: Percent
+        value: 100
+        periodSeconds: 30
+      selectPolicy: Max
+{{- end }}

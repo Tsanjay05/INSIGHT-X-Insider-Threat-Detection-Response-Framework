@@ -1,0 +1,8 @@
+Start-Process powershell -ArgumentList "mvn spring-boot:run -pl insightx-api-gateway"
+Start-Process powershell -ArgumentList "mvn spring-boot:run -pl insightx-trust-engine"
+Start-Process powershell -ArgumentList "mvn spring-boot:run -pl insightx-intent"
+Start-Process powershell -ArgumentList "mvn spring-boot:run -pl insightx-controls"
+Start-Process powershell -ArgumentList "mvn spring-boot:run -pl insightx-provenance"
+Start-Process powershell -ArgumentList "mvn spring-boot:run -pl insightx-ingestion"
+Start-Process powershell -ArgumentList "mvn spring-boot:run -pl insightx-graph"
+Start-Process powershell -ArgumentList "mvn spring-boot:run -pl insightx-stream-gateway"

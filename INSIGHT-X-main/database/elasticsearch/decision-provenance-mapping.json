@@ -1,0 +1,20 @@
+{
+  "mappings": {
+    "properties": {
+      "decision_id": { "type": "keyword" },
+      "user_id": { "type": "keyword" },
+      "timestamp": { "type": "date" },
+      "contributing_signals": { "type": "keyword" },
+      "rule_ids": { "type": "keyword" },
+      "policy_ids": { "type": "keyword" },
+      "confidence_score": { "type": "float" },
+      "data_sources": { "type": "keyword" },
+      "temporal_context": { "type": "object" },
+      "hash_chain": { "type": "keyword" }
+    }
+  },
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  }
+}

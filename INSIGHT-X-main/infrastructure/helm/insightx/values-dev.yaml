@@ -1,0 +1,113 @@
+# INSIGHT-X Helm Chart Values - Development Environment
+# Local development and testing configuration
+
+global:
+  environment: development
+  region: local
+
+# Minimal replica counts
+ingestion:
+  replicaCount: 1
+  autoscaling:
+    enabled: false
+
+trustEngine:
+  replicaCount: 1
+  autoscaling:
+    enabled: false
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      cpu: 1
+      memory: 2Gi
+
+intent:
+  replicaCount: 1
+  autoscaling:
+    enabled: false
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      cpu: 1
+      memory: 2Gi
+
+graph:
+  replicaCount: 1
+  autoscaling:
+    enabled: false
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      cpu: 1
+      memory: 2Gi
+
+controls:
+  replicaCount: 1
+  autoscaling:
+    enabled: false
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      cpu: 1
+      memory: 2Gi
+
+provenance:
+  replicaCount: 1
+  autoscaling:
+    enabled: false
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      cpu: 1
+      memory: 2Gi
+
+apiGateway:
+  replicaCount: 1
+  autoscaling:
+    enabled: false
+  service:
+    type: NodePort
+    port: 8080
+
+# Multi-region disabled
+dataResidency:
+  enabled: false
+
+# Fault isolation disabled
+faultIsolation:
+  enabled: false
+
+# Minimal security for development
+security:
+  podSecurityPolicy:
+    enabled: false
+  networkPolicy:
+    enabled: false
+  podDisruptionBudget:
+    enabled: false
+  serviceMesh:
+    enabled: false
+
+# Backup disabled
+backup:
+  enabled: false
+
+# Observability
+observability:
+  metrics:
+    enabled: true
+  tracing:
+    enabled: true
+    samplingRate: 1.0  # 100% sampling in dev
+  logging:
+    level: DEBUG

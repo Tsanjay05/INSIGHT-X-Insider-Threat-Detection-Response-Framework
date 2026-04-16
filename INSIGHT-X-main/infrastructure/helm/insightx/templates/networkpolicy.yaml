@@ -1,0 +1,351 @@
+{{- if .Values.security.networkPolicy.enabled }}
+---
+# Default deny all ingress traffic
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "insightx.fullname" . }}-default-deny
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+
+---
+# API Gateway - allow ingress from internet, egress to all backend services
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "insightx.fullname" . }}-api-gateway
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: api-gateway
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/component: api-gateway
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - namespaceSelector: {}
+    ports:
+    - protocol: TCP
+      port: 8443
+  egress:
+  # Allow DNS
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          name: kube-system
+    ports:
+    - protocol: UDP
+      port: 53
+  # Allow Keycloak
+  - to:
+    - podSelector:
+        matchLabels:
+          app: keycloak
+    ports:
+    - protocol: TCP
+      port: 8080
+  # Allow all backend services
+  - to:
+    - podSelector:
+        matchLabels:
+          app.kubernetes.io/part-of: insightx
+    ports:
+    - protocol: TCP
+      port: 8080
+    - protocol: TCP
+      port: 8081
+    - protocol: TCP
+      port: 8082
+    - protocol: TCP
+      port: 8083
+    - protocol: TCP
+      port: 8084
+    - protocol: TCP
+      port: 8085
+
+---
+# Ingestion Service - allow egress to Kafka, external IAM systems
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "insightx.fullname" . }}-ingestion
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: ingestion
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/component: ingestion
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app.kubernetes.io/component: api-gateway
+    ports:
+    - protocol: TCP
+      port: 8080
+  egress:
+  # Allow DNS
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          name: kube-system
+    ports:
+    - protocol: UDP
+      port: 53
+  # Allow Kafka
+  - to:
+    - podSelector:
+        matchLabels:
+          app: kafka
+    ports:
+    - protocol: TCP
+      port: 9092
+  # Allow external connectors (Okta, Azure AD, DLP)
+  - to:
+    - namespaceSelector: {}
+    ports:
+    - protocol: TCP
+      port: 443
+
+---
+# Trust Engine - allow ingress from API Gateway and Controls, egress to PostgreSQL, OPA, Kafka
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "insightx.fullname" . }}-trust-engine
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: trust-engine
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/component: trust-engine
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app.kubernetes.io/component: api-gateway
+    - podSelector:
+        matchLabels:
+          app.kubernetes.io/component: controls
+    ports:
+    - protocol: TCP
+      port: 8081
+    - protocol: TCP
+      port: 9091
+  egress:
+  # Allow DNS
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          name: kube-system
+    ports:
+    - protocol: UDP
+      port: 53
+  # Allow PostgreSQL
+  - to:
+    - podSelector:
+        matchLabels:
+          app: postgresql
+    ports:
+    - protocol: TCP
+      port: 5432
+  # Allow Kafka
+  - to:
+    - podSelector:
+        matchLabels:
+          app: kafka
+    ports:
+    - protocol: TCP
+      port: 9092
+  # Allow OPA
+  - to:
+    - podSelector:
+        matchLabels:
+          app: opa
+    ports:
+    - protocol: TCP
+      port: 8181
+
+---
+# Graph Service - allow ingress from API Gateway, egress to Neo4j, Kafka
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "insightx.fullname" . }}-graph
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: graph
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/component: graph
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app.kubernetes.io/component: api-gateway
+    ports:
+    - protocol: TCP
+      port: 8083
+  egress:
+  # Allow DNS
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          name: kube-system
+    ports:
+    - protocol: UDP
+      port: 53
+  # Allow Neo4j
+  - to:
+    - podSelector:
+        matchLabels:
+          app: neo4j
+    ports:
+    - protocol: TCP
+      port: 7687
+  # Allow Kafka
+  - to:
+    - podSelector:
+        matchLabels:
+          app: kafka
+    ports:
+    - protocol: TCP
+      port: 9092
+
+---
+# Controls Service - allow ingress from API Gateway, egress to all enforcement targets
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "insightx.fullname" . }}-controls
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: controls
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/component: controls
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app.kubernetes.io/component: api-gateway
+    ports:
+    - protocol: TCP
+      port: 8084
+  egress:
+  # Allow DNS
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          name: kube-system
+    ports:
+    - protocol: UDP
+      port: 53
+  # Allow all backend services
+  - to:
+    - podSelector:
+        matchLabels:
+          app.kubernetes.io/part-of: insightx
+  # Allow Kafka
+  - to:
+    - podSelector:
+        matchLabels:
+          app: kafka
+    ports:
+    - protocol: TCP
+      port: 9092
+  # Allow Keycloak for enforcement
+  - to:
+    - podSelector:
+        matchLabels:
+          app: keycloak
+    ports:
+    - protocol: TCP
+      port: 8080
+  # Allow external SOAR systems
+  - to:
+    - namespaceSelector: {}
+    ports:
+    - protocol: TCP
+      port: 443
+
+---
+# Provenance Service - allow ingress from API Gateway, egress to Elasticsearch, Kafka
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "insightx.fullname" . }}-provenance
+  namespace: {{ .Values.global.namespace }}
+  labels:
+    {{- include "insightx.labels" . | nindent 4 }}
+    app.kubernetes.io/component: provenance
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/component: provenance
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app.kubernetes.io/component: api-gateway
+    ports:
+    - protocol: TCP
+      port: 8085
+  egress:
+  # Allow DNS
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          name: kube-system
+    ports:
+    - protocol: UDP
+      port: 53
+  # Allow Elasticsearch
+  - to:
+    - podSelector:
+        matchLabels:
+          app: elasticsearch
+    ports:
+    - protocol: TCP
+      port: 9200
+  # Allow Kafka
+  - to:
+    - podSelector:
+        matchLabels:
+          app: kafka
+    ports:
+    - protocol: TCP
+      port: 9092
+{{- end }}

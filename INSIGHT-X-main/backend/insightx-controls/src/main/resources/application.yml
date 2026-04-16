@@ -1,0 +1,27 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: insightx-controls
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/insightx
+    username: insightx
+    password: insightx
+  flyway:
+    url: jdbc:postgresql://localhost:5432/insightx
+    user: insightx
+    password: insightx
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: insightx-controls-group
+      auto-offset-reset: latest
+      enable-auto-commit: true
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer

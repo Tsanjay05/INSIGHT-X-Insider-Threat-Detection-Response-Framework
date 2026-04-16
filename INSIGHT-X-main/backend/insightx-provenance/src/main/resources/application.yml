@@ -1,0 +1,28 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: insightx-provenance
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/insightx_provenance
+    username: insightx
+    password: password
+  flyway:
+    url: jdbc:postgresql://localhost:5432/insightx_provenance
+    user: insightx
+    password: password
+    locations: classpath:db/migration
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: insightx-provenance-group
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+
+logging:
+  level:
+    com.insightx.provenance: DEBUG

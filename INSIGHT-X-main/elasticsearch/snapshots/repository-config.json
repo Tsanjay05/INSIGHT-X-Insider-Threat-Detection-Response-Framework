@@ -1,0 +1,15 @@
+{
+    "type": "s3",
+    "settings": {
+        "bucket": "insightx-elasticsearch-snapshots",
+        "region": "us-east-1",
+        "base_path": "snapshots",
+        "compress": true,
+        "server_side_encryption": true,
+        "storage_class": "intelligent_tiering",
+        "max_restore_bytes_per_sec": "100mb",
+        "max_snapshot_bytes_per_sec": "100mb",
+        "chunk_size": "1gb",
+        "readonly": false
+    }
+}

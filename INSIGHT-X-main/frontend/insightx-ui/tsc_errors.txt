@@ -1,0 +1,47 @@
+﻿src/pages/Approvals.tsx(3,29): error TS2307: Cannot find module '../../api/controls' or its corresponding type declarations.
+src/pages/Approvals.tsx(4,27): error TS2307: Cannot find module '../../components/auth/RoleGuard' or its corresponding type declarations.
+src/pages/Approvals.tsx(5,22): error TS2307: Cannot find module '../../components/ui/Card' or its corresponding type declarations.
+src/pages/Approvals.tsx(6,23): error TS2307: Cannot find module '../../components/ui/Badge' or its corresponding type declarations.
+src/pages/Approvals.tsx(7,24): error TS2307: Cannot find module '../../components/ui/Button' or its corresponding type declarations.
+src/pages/Approvals.tsx(8,30): error TS2307: Cannot find module '../../components/ui/LoadingState' or its corresponding type declarations.
+src/pages/Approvals.tsx(9,28): error TS2307: Cannot find module '../../components/ui/ErrorState' or its corresponding type declarations.
+src/pages/Approvals.tsx(10,28): error TS2307: Cannot find module '../../components/ui/EmptyState' or its corresponding type declarations.
+src/pages/Approvals.tsx(11,48): error TS2307: Cannot find module '../../lib/utils' or its corresponding type declarations.
+src/pages/Approvals.tsx(33,46): error TS7006: Parameter 'r' implicitly has an 'any' type.
+src/pages/Approvals.tsx(34,48): error TS7006: Parameter 'r' implicitly has an 'any' type.
+src/pages/Approvals.tsx(59,47): error TS7006: Parameter 'request' implicitly has an 'any' type.
+src/pages/Approvals.tsx(123,57): error TS7006: Parameter 'request' implicitly has an 'any' type.
+src/pages/Campaigns.tsx(4,26): error TS2307: Cannot find module '../../api/graph' or its corresponding type declarations.
+src/pages/Campaigns.tsx(5,22): error TS2307: Cannot find module '../../components/ui/Card' or its corresponding type declarations.
+src/pages/Campaigns.tsx(6,23): error TS2307: Cannot find module '../../components/ui/Badge' or its corresponding type declarations.
+src/pages/Campaigns.tsx(7,30): error TS2307: Cannot find module '../../components/ui/LoadingState' or its corresponding type declarations.
+src/pages/Campaigns.tsx(8,28): error TS2307: Cannot find module '../../components/ui/ErrorState' or its corresponding type declarations.
+src/pages/Campaigns.tsx(9,28): error TS2307: Cannot find module '../../components/ui/EmptyState' or its corresponding type declarations.
+src/pages/Campaigns.tsx(10,52): error TS2307: Cannot find module '../../lib/utils' or its corresponding type declarations.
+src/pages/Campaigns.tsx(40,37): error TS7006: Parameter 'campaign' implicitly has an 'any' type.
+src/pages/Controls.tsx(4,29): error TS2307: Cannot find module '../../api/controls' or its corresponding type declarations.
+src/pages/Controls.tsx(5,22): error TS2307: Cannot find module '../../components/ui/Card' or its corresponding type declarations.
+src/pages/Controls.tsx(6,23): error TS2307: Cannot find module '../../components/ui/Badge' or its corresponding type declarations.
+src/pages/Controls.tsx(7,30): error TS2307: Cannot find module '../../components/ui/LoadingState' or its corresponding type declarations.
+src/pages/Controls.tsx(8,28): error TS2307: Cannot find module '../../components/ui/ErrorState' or its corresponding type declarations.
+src/pages/Controls.tsx(9,28): error TS2307: Cannot find module '../../components/ui/EmptyState' or its corresponding type declarations.
+src/pages/Controls.tsx(10,30): error TS2307: Cannot find module '../../components/utils/export' or its corresponding type declarations.
+src/pages/Controls.tsx(11,10): error TS6133: 'formatTimestamp' is declared but its value is never read.
+src/pages/Controls.tsx(11,71): error TS2307: Cannot find module '../../lib/utils' or its corresponding type declarations.
+src/pages/Controls.tsx(63,48): error TS7006: Parameter 'control' implicitly has an 'any' type.
+src/pages/Intent.tsx(4,27): error TS2307: Cannot find module '../../api/intent' or its corresponding type declarations.
+src/pages/Intent.tsx(5,22): error TS2307: Cannot find module '../../components/ui/Card' or its corresponding type declarations.
+src/pages/Intent.tsx(6,30): error TS2307: Cannot find module '../../components/ui/LoadingState' or its corresponding type declarations.
+src/pages/Intent.tsx(7,28): error TS2307: Cannot find module '../../components/ui/ErrorState' or its corresponding type declarations.
+src/pages/Intent.tsx(8,28): error TS2307: Cannot find module '../../components/ui/EmptyState' or its corresponding type declarations.
+src/pages/Intent.tsx(9,31): error TS2307: Cannot find module '../../lib/utils' or its corresponding type declarations.
+src/pages/Intent.tsx(50,50): error TS7006: Parameter 'hypothesis' implicitly has an 'any' type.
+src/pages/Provenance.tsx(4,31): error TS2307: Cannot find module '../../api/provenance' or its corresponding type declarations.
+src/pages/Provenance.tsx(5,41): error TS2307: Cannot find module '../../api/provenance.types' or its corresponding type declarations.
+src/pages/Provenance.tsx(6,22): error TS2307: Cannot find module '../../components/ui/Card' or its corresponding type declarations.
+src/pages/Provenance.tsx(7,23): error TS2307: Cannot find module '../../components/ui/Badge' or its corresponding type declarations.
+src/pages/Provenance.tsx(8,30): error TS2307: Cannot find module '../../components/ui/LoadingState' or its corresponding type declarations.
+src/pages/Provenance.tsx(9,28): error TS2307: Cannot find module '../../components/ui/ErrorState' or its corresponding type declarations.
+src/pages/Provenance.tsx(10,28): error TS2307: Cannot find module '../../components/ui/EmptyState' or its corresponding type declarations.
+src/pages/Provenance.tsx(11,30): error TS2307: Cannot find module '../../components/utils/export' or its corresponding type declarations.
+src/pages/Provenance.tsx(12,52): error TS2307: Cannot find module '../../lib/utils' or its corresponding type declarations.

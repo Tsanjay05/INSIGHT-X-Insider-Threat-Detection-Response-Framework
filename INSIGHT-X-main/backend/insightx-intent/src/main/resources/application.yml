@@ -1,0 +1,14 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: insightx-intent
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/insightx
+    username: insightx
+    password: insightx
+  flyway:
+    url: jdbc:postgresql://localhost:5432/insightx
+    user: insightx
+    password: insightx

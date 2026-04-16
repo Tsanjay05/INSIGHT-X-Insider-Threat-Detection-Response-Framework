@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: insightx-config
+  namespace: insightx
+data:
+  LOG_LEVEL: "INFO"
+  KAFKA_BOOTSTRAP_SERVERS: "kafka-broker:9092"
+  POSTGRES_HOST: "postgres"
+  NEO4J_URI: "bolt://neo4j:7687"
+  ELASTICSEARCH_HOST: "elasticsearch:9200"

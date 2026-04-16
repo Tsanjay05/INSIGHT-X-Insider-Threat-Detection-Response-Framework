@@ -1,0 +1,105 @@
+{
+  "type": "record",
+  "name": "PrivilegedOpsEvent",
+  "namespace": "com.insightx.events",
+  "doc": "Privileged operations event schema for admin/system actions",
+  "fields": [
+    {
+      "name": "event_id",
+      "type": "string",
+      "doc": "Unique event identifier (UUID)"
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "logicalType": "timestamp-millis",
+      "doc": "Event timestamp in milliseconds since epoch"
+    },
+    {
+      "name": "user_id",
+      "type": "string",
+      "doc": "User identifier"
+    },
+    {
+      "name": "source_system",
+      "type": "string",
+      "doc": "Source system"
+    },
+    {
+      "name": "event_type",
+      "type": {
+        "type": "enum",
+        "name": "PrivilegedOpsEventType",
+        "symbols": [
+          "PRIVILEGE_ESCALATION",
+          "ADMIN_LOGIN",
+          "CONFIG_CHANGE",
+          "USER_CREATION",
+          "USER_DELETION",
+          "PERMISSION_GRANT",
+          "PERMISSION_REVOKE",
+          "SYSTEM_COMMAND",
+          "DATABASE_ADMIN",
+          "INFRASTRUCTURE_CHANGE"
+        ]
+      },
+      "doc": "Type of privileged operation"
+    },
+    {
+      "name": "operation",
+      "type": "string",
+      "doc": "Specific operation performed"
+    },
+    {
+      "name": "target_user_id",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Target user (if operation affects another user)"
+    },
+    {
+      "name": "command",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Command executed (if applicable)"
+    },
+    {
+      "name": "previous_value",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Previous configuration value"
+    },
+    {
+      "name": "new_value",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "New configuration value"
+    },
+    {
+      "name": "approval_required",
+      "type": "boolean",
+      "default": false,
+      "doc": "Whether operation requires approval"
+    },
+    {
+      "name": "approval_id",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Approval workflow ID (if applicable)"
+    },
+    {
+      "name": "source_ip",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Source IP address"
+    },
+    {
+      "name": "metadata",
+      "type": {
+        "type": "map",
+        "values": "string"
+      },
+      "default": {},
+      "doc": "Additional metadata"
+    }
+  ]
+}

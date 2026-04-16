@@ -1,0 +1,44 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: insightx-trust-engine
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/insightx
+    username: insightx
+    password: insightx
+    pool:
+      enabled: false
+      initial-size: 5
+      max-size: 20
+
+  flyway:
+    enabled: false
+    url: jdbc:postgresql://localhost:5432/insightx?options=-c%20timezone=UTC
+    user: insightx
+    password: insightx
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+  jackson:
+    time-zone: UTC
+
+logging:
+  level:
+    root: INFO
+    com.insightx: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.r2dbc: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+

@@ -1,0 +1,95 @@
+{
+  "type": "record",
+  "name": "WorkflowEvent",
+  "namespace": "com.insightx.events",
+  "doc": "Workflow event schema for business process activities",
+  "fields": [
+    {
+      "name": "event_id",
+      "type": "string",
+      "doc": "Unique event identifier (UUID)"
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "logicalType": "timestamp-millis",
+      "doc": "Event timestamp in milliseconds since epoch"
+    },
+    {
+      "name": "user_id",
+      "type": "string",
+      "doc": "User identifier"
+    },
+    {
+      "name": "source_system",
+      "type": "string",
+      "doc": "Source system (Jira, ServiceNow, etc.)"
+    },
+    {
+      "name": "event_type",
+      "type": {
+        "type": "enum",
+        "name": "WorkflowEventType",
+        "symbols": [
+          "TICKET_CREATED",
+          "TICKET_UPDATED",
+          "TICKET_CLOSED",
+          "APPROVAL_REQUESTED",
+          "APPROVAL_GRANTED",
+          "APPROVAL_DENIED",
+          "ESCALATION",
+          "COMMENT_ADDED"
+        ]
+      },
+      "doc": "Type of workflow event"
+    },
+    {
+      "name": "workflow_id",
+      "type": "string",
+      "doc": "Workflow instance identifier"
+    },
+    {
+      "name": "workflow_type",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Type of workflow"
+    },
+    {
+      "name": "status",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Current workflow status"
+    },
+    {
+      "name": "previous_status",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Previous workflow status"
+    },
+    {
+      "name": "assignee",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Current assignee"
+    },
+    {
+      "name": "priority",
+      "type": ["null", {
+        "type": "enum",
+        "name": "Priority",
+        "symbols": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+      }],
+      "default": null,
+      "doc": "Workflow priority"
+    },
+    {
+      "name": "metadata",
+      "type": {
+        "type": "map",
+        "values": "string"
+      },
+      "default": {},
+      "doc": "Additional metadata"
+    }
+  ]
+}

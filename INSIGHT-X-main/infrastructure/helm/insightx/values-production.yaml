@@ -1,0 +1,127 @@
+# INSIGHT-X Helm Chart Values - Production Environment
+# High-availability configuration with strict resource limits
+
+global:
+  environment: production
+  region: us-east-1
+
+# Production replica counts
+ingestion:
+  replicaCount: 3
+  autoscaling:
+    minReplicas: 3
+    maxReplicas: 15
+  resources:
+    requests:
+      cpu: 1
+      memory: 2Gi
+    limits:
+      cpu: 4
+      memory: 8Gi
+
+trustEngine:
+  replicaCount: 5
+  autoscaling:
+    minReplicas: 5
+    maxReplicas: 20
+  resources:
+    requests:
+      cpu: 2
+      memory: 4Gi
+    limits:
+      cpu: 8
+      memory: 16Gi
+
+intent:
+  replicaCount: 3
+  autoscaling:
+    minReplicas: 3
+    maxReplicas: 15
+  resources:
+    requests:
+      cpu: 1
+      memory: 2Gi
+    limits:
+      cpu: 4
+      memory: 8Gi
+
+graph:
+  replicaCount: 3
+  autoscaling:
+    minReplicas: 3
+    maxReplicas: 15
+  resources:
+    requests:
+      cpu: 2
+      memory: 4Gi
+    limits:
+      cpu: 8
+      memory: 16Gi
+
+controls:
+  replicaCount: 3
+  autoscaling:
+    minReplicas: 3
+    maxReplicas: 15
+
+provenance:
+  replicaCount: 3
+  autoscaling:
+    minReplicas: 3
+    maxReplicas: 15
+
+apiGateway:
+  replicaCount: 5
+  autoscaling:
+    minReplicas: 5
+    maxReplicas: 20
+  service:
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+      service.beta.kubernetes.io/aws-load-balancer-ssl-cert: "${SSL_CERTIFICATE_ARN}"
+      service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
+
+# Multi-region enabled
+dataResidency:
+  enabled: true
+
+# Fault isolation enabled
+faultIsolation:
+  enabled: true
+  podAntiAffinity:
+    type: hard  # Hard anti-affinity in production
+
+# Enhanced security
+security:
+  podSecurityPolicy:
+    enabled: true
+  networkPolicy:
+    enabled: true
+    defaultDeny: true
+  podDisruptionBudget:
+    enabled: true
+    minAvailable: 2  # Higher availability in production
+  serviceMesh:
+    enabled: true
+    type: istio
+
+# Backup enabled
+backup:
+  enabled: true
+  schedule: "0 2,14 * * *"  # Twice daily
+  retention:
+    daily: 14
+    weekly: 8
+    monthly: 24
+
+# Observability
+observability:
+  metrics:
+    enabled: true
+    serviceMonitor:
+      interval: 15s  # More frequent scraping
+  tracing:
+    enabled: true
+    samplingRate: 0.05  # 5% sampling in production
+  logging:
+    level: WARN  # Less verbose in production

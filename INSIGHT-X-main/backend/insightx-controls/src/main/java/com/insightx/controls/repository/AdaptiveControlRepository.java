@@ -1,0 +1,11 @@
+package com.insightx.controls.repository;
+
+import com.insightx.controls.domain.AdaptiveControl;
+import org.springframework.data.r2dbc.repository.R2dbcRepository;
+import org.springframework.stereotype.Repository;
+import reactor.core.publisher.Flux;
+
+@Repository
+public interface AdaptiveControlRepository extends R2dbcRepository<AdaptiveControl, String> {
+    Flux<AdaptiveControl> findByEntityIdAndStatus(String entityId, AdaptiveControl.ControlStatus status);
+}

@@ -1,0 +1,104 @@
+{
+    "index_patterns": [
+        "insightx-policy-decisions-*"
+    ],
+    "version": 1,
+    "priority": 150,
+    "template": {
+        "settings": {
+            "number_of_shards": 2,
+            "number_of_replicas": 2,
+            "index.lifecycle.name": "insightx-policy-decisions-policy",
+            "index.lifecycle.rollover_alias": "insightx-policy-decisions",
+            "refresh_interval": "10s",
+            "codec": "best_compression"
+        },
+        "mappings": {
+            "properties": {
+                "@timestamp": {
+                    "type": "date"
+                },
+                "decision_id": {
+                    "type": "keyword"
+                },
+                "policy_id": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "policy_name": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "user_id": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "decision": {
+                    "type": "keyword",
+                    "index": true
+                },
+                "confidence": {
+                    "type": "float"
+                },
+                "input": {
+                    "type": "object",
+                    "properties": {
+                        "trust_score": {
+                            "type": "float"
+                        },
+                        "risk_indicators": {
+                            "type": "nested",
+                            "properties": {
+                                "type": {
+                                    "type": "keyword"
+                                },
+                                "severity": {
+                                    "type": "keyword"
+                                },
+                                "value": {
+                                    "type": "float"
+                                }
+                            }
+                        },
+                        "context": {
+                            "type": "object",
+                            "enabled": true,
+                            "dynamic": true
+                        }
+                    }
+                },
+                "output": {
+                    "type": "object",
+                    "properties": {
+                        "action": {
+                            "type": "keyword"
+                        },
+                        "controls": {
+                            "type": "keyword"
+                        },
+                        "requires_approval": {
+                            "type": "boolean"
+                        },
+                        "rationale": {
+                            "type": "text"
+                        }
+                    }
+                },
+                "execution_time_ms": {
+                    "type": "long"
+                },
+                "opa_version": {
+                    "type": "keyword",
+                    "index": false
+                },
+                "created_at": {
+                    "type": "date"
+                }
+            }
+        }
+    },
+    "_meta": {
+        "description": "Index template for OPA policy decision logs",
+        "version": "1.0.0"
+    }
+}
