@@ -227,6 +227,23 @@ INSIGHT-X-main/
 └── techStack.md             # Technology stack
 ```
 
+## 📸 Project Screenshots
+
+### Login
+![INSIGHT-X Login](INSIGHT-X-main/docs/screenshots/login-page.png)
+
+### Dashboard
+![INSIGHT-X Dashdoard](INSIGHT-X-main/docs/screenshots/dashboard-page.png)
+
+### Cases
+![Cases Management](INSIGHT-X-main/docs/screenshots/cases-page.png)
+
+### Provenance
+![Decision Provenance](INSIGHT-X-main/docs/screenshots/provenance.png)
+
+### Settings
+![INSIGHT-X Settings](INSIGHT-X-main/docs/screenshots/settings-page.png)
+
 ## 👨‍💻 My Contribution
 
 As a student developer, I mainly worked on the backend and system logic of the project.
