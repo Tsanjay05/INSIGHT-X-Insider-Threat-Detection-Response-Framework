@@ -229,20 +229,20 @@ INSIGHT-X-main/
 
 ## 📸 Project Screenshots
 
-### Login
-![INSIGHT-X Login](INSIGHT-X-main/docs/screenshots/login-page.png)
+### Login Page
+![INSIGHT-X Login Page](INSIGHT-X-main/docs/screenshots/login-page.jpeg)
 
 ### Dashboard
-![INSIGHT-X Dashdoard](INSIGHT-X-main/docs/screenshots/dashboard-page.png)
+![INSIGHT-X Dashboard](INSIGHT-X-main/docs/screenshots/dashboard-page.jpeg)
 
 ### Cases
-![Cases Management](INSIGHT-X-main/docs/screenshots/cases-page.png)
+![INSIGHT-X Cases](INSIGHT-X-main/docs/screenshots/cases-page.jpeg)
 
 ### Provenance
-![Decision Provenance](INSIGHT-X-main/docs/screenshots/provenance.png)
+![INSIGHT-X Provenance](INSIGHT-X-main/docs/screenshots/provenance-page.jpeg)
 
 ### Settings
-![INSIGHT-X Settings](INSIGHT-X-main/docs/screenshots/settings-page.png)
+![INSIGHT-X Settings](INSIGHT-X-main/docs/screenshots/settings-page.jpeg)
 
 ## 👨‍💻 My Contribution
 
